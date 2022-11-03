@@ -13,12 +13,15 @@
     "@splinetool/runtime": "^0.9.135",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.6.0",
+    "styled-components": "^5.3.6",
     "swiper": "^8.4.4"
   },
   "devDependencies": {
     "@types/react": "^18.0.22",
     "@types/react-dom": "^18.0.7",
     "@vitejs/plugin-react": "^2.2.0",
+    "babel-plugin-styled-components": "^2.0.7",
     "vite": "^3.2.0"
   }
 }

@@ -27,12 +27,14 @@ export default function World() {
 
   function filterCity(id) {
     var output = data.filter((city) => city.id === id);
+    // @ts-ignore
     setDataModal(output);
   }
 
   function onLoad(splineApp) {
     // save the app in a ref for later use
     spline.current = splineApp;
+    console.log(splineApp);
   }
 
   function triggerAnimation(e) {
@@ -52,6 +54,7 @@ export default function World() {
     }, 500);
 
     setPointId(e.target.id);
+    console.log("animtaion");
   }
 
   function cancelAnimation() {

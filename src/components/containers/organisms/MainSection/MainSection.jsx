@@ -1,4 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+import styled from "styled-components";
 import { Navigation, Pagination, Mousewheel } from "swiper";
 import "../../../../../src/styles.css";
 import React, { useRef, useState, useEffect } from "react";
@@ -6,10 +7,18 @@ import React, { useRef, useState, useEffect } from "react";
 import "swiper/css";
 import "swiper/css/pagination";
 import StorySection from "../StorySection/StorySection";
+import HomeSection from "../HomeSection/HomeSection";
 
-const MainSection = ({ setIndex, activeIndex }) => {
+export const SwiperSlideCustom = styled(SwiperSlide)`
+  height: calc(100vh) - 50px;
+  position: relative;
+  overflow: hidden;
+`;
+
+const MainSection = ({ setIndex, activeIndex, scrollIcon, setScrollIcon }) => {
   const [canSwipe, setCanSwipe] = useState(true);
   const [worldSlide, setWorldSlide] = useState(false);
+
   const swiperRef = useRef(null);
   const changeSlide = (index) => {
     setIndex(index);
@@ -33,26 +42,33 @@ const MainSection = ({ setIndex, activeIndex }) => {
   return (
     <Swiper
       ref={swiperRef}
-      direction={"vertical"}
-      modules={[Navigation, Pagination, Mousewheel]}
-      pagination={{
-        clickable: true,
+      onTransitionEnd={() => {
+        setScrollIcon(true);
       }}
+      onTransitionStart={() => {
+        setScrollIcon(false);
+      }}
+      direction={"vertical"}
+      modules={[Navigation, Mousewheel]}
       mousewheel={true}
-      onSlideChange={(activeIndex) => changeSlide(activeIndex.realIndex)}
+      onSlideChange={(activeIndex) => {
+        changeSlide(activeIndex.realIndex);
+      }}
       longSwipesMs={1000}
+      style={{ paddingTop: "50px" }}
     >
-      <SwiperSlide></SwiperSlide>
-      <SwiperSlide>
+      <SwiperSlideCustom>
+        <HomeSection />
+      </SwiperSlideCustom>
+      <SwiperSlideCustom>
         <StorySection
           swipe={canSwipe}
           setSwipe={setCanSwipe}
           index={worldSlide}
         />
-      </SwiperSlide>
-      <SwiperSlide></SwiperSlide>
-      <SwiperSlide></SwiperSlide>
-      ...
+      </SwiperSlideCustom>
+      <SwiperSlideCustom></SwiperSlideCustom>
+      <SwiperSlideCustom></SwiperSlideCustom>
     </Swiper>
   );
 };

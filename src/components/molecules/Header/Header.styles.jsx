@@ -29,7 +29,7 @@ export const MenuButton = styled.div`
   cursor: pointer;
   display: flex;
   justify-content: center;
-  font-size: 20px;
+  font-size: 30px;
   height: 50px;
-  width: 50px;
+  width: 60px;
 `;

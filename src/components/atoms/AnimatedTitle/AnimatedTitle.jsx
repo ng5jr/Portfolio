@@ -49,7 +49,7 @@ const AnimatedTitle = () => {
               {letter}
             </div>
           ) : (
-            <a key={"emtpy" + i}> </a>
+            <b key={"emtpy" + i}> </b>
           );
         })}
       </TitleContainer>

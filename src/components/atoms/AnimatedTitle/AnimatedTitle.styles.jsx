@@ -179,7 +179,7 @@ export const DescContainer = styled.p`
   max-width: 450px;
   font-style: italic;
   background-color: ${COLORS.secondary};
-  color: black;
+  color: ${COLORS.background};
   border-radius: 20px;
   @media (max-width: 900px) {
     max-width: 300px;
@@ -192,15 +192,15 @@ export const DescContainer = styled.p`
     text-align: center;
     width: fit-content;
     filter: drop-shadow(15px 0px 3px #09090994);
-    padding: 10px 0;
-    max-width: 90vw;
+    padding: 10px;
+    max-width: 85vw;
   }
-  &::before {
+  /* &::before {
     content: "{ ";
     color: var(--secondaryColor);
   }
   &::after {
     content: " }";
     color: var(--secondaryColor);
-  }
+  } */
 `;

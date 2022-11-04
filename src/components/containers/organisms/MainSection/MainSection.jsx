@@ -8,6 +8,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import StorySection from "../StorySection/StorySection";
 import HomeSection from "../HomeSection/HomeSection";
+import AboutSection from "../AboutSection/AboutSection";
 
 export const SwiperSlideCustom = styled(SwiperSlide)`
   height: calc(100vh) - 50px;
@@ -20,11 +21,11 @@ const MainSection = ({ setIndex, activeIndex, scrollIcon, setScrollIcon }) => {
   const [worldSlide, setWorldSlide] = useState(false);
 
   const swiperRef = useRef(null);
-  const renderMap = () => {
-    // setTimeout(() => {
-    //   setWorldSlide(true);
-    // }, 4000);
-  };
+  // const renderMap = () => {
+  //   // setTimeout(() => {
+  //   //   setWorldSlide(true);
+  //   // }, 4000);
+  // };
   const changeSlide = (index) => {
     setIndex(index);
   };
@@ -61,12 +62,14 @@ const MainSection = ({ setIndex, activeIndex, scrollIcon, setScrollIcon }) => {
       }}
       longSwipesMs={1000}
       style={{ paddingTop: "50px" }}
-      onAfterInit={renderMap}
+      // onAfterInit={renderMap}
     >
       <SwiperSlideCustom>
         <HomeSection />
       </SwiperSlideCustom>
-      <SwiperSlideCustom></SwiperSlideCustom>
+      <SwiperSlideCustom>
+        <AboutSection index={activeIndex}></AboutSection>
+      </SwiperSlideCustom>
       <SwiperSlideCustom>
         <StorySection
           swipe={canSwipe}

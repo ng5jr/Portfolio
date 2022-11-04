@@ -79,7 +79,7 @@ export const HomeSocialLink = styled.a`
   color: ${COLORS.secondary};
   height: 25px;
   width: 25px;
-  transform: translateY(0) scale(1.3);
+  transform: translateY(0) scale(1.6);
   filter: drop-shadow(5px 0px 3px #09090994);
   .social-1 {
     animation: ${showLinks} 1s ease-out forwards;
@@ -102,7 +102,7 @@ export const HomeSocialLink = styled.a`
     transform: scale(1.3) translateY(0.25rem);
   }
   @media (max-width: 768px) {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     &:hover {
       transform: scale(1.3) translateY(0);
     }

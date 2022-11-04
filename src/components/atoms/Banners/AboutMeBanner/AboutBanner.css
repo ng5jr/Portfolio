@@ -1,0 +1,36 @@
+@-webkit-keyframes svg-text-anim {
+  40% {
+    stroke-dashoffset: 0;
+    fill: transparent;
+  }
+  60% {
+    stroke-dashoffset: 0;
+    fill: #db9b07;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: #db9b07;
+  }
+}
+/* Most browsers */
+@keyframes svg-text-anim {
+  40% {
+    stroke-dashoffset: 0;
+    fill: transparent;
+  }
+  60% {
+    stroke-dashoffset: 0;
+    fill: #db9b07;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: #db9b07;
+  }
+}
+
+.svgContainer {
+  max-width: 90vw;
+  opacity: 0.7;
+  position: absolute;
+  top: 1rem;
+}

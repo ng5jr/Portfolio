@@ -6,7 +6,12 @@ const StorySection = ({ index, swipe, setSwipe }) => {
   return (
     <div
       // onTouchEnd={() => setSwipe(true)}
-      style={{ width: "fit-content", height: "100%" }}
+      style={{
+        width: "fit-content",
+        height: "100%",
+
+        margin: "0 auto",
+      }}
     >
       {active && (
         <div

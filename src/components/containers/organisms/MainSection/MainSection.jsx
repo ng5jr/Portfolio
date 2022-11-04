@@ -21,9 +21,9 @@ const MainSection = ({ setIndex, activeIndex, scrollIcon, setScrollIcon }) => {
 
   const swiperRef = useRef(null);
   const renderMap = () => {
-    setTimeout(() => {
-      setWorldSlide(true);
-    }, 4000);
+    // setTimeout(() => {
+    //   setWorldSlide(true);
+    // }, 4000);
   };
   const changeSlide = (index) => {
     setIndex(index);
@@ -31,9 +31,9 @@ const MainSection = ({ setIndex, activeIndex, scrollIcon, setScrollIcon }) => {
   useEffect(() => {
     // @ts-ignore
     swiperRef?.current?.swiper?.slideTo(activeIndex);
-    // if (activeIndex === 1) {
-    //   setWorldSlide(true);
-    // }
+    if (activeIndex === 2) {
+      setWorldSlide(true);
+    }
   }, [activeIndex]);
   useEffect(() => {
     // @ts-ignore
@@ -66,6 +66,7 @@ const MainSection = ({ setIndex, activeIndex, scrollIcon, setScrollIcon }) => {
       <SwiperSlideCustom>
         <HomeSection />
       </SwiperSlideCustom>
+      <SwiperSlideCustom></SwiperSlideCustom>
       <SwiperSlideCustom>
         <StorySection
           swipe={canSwipe}
@@ -73,7 +74,6 @@ const MainSection = ({ setIndex, activeIndex, scrollIcon, setScrollIcon }) => {
           index={worldSlide}
         />
       </SwiperSlideCustom>
-      <SwiperSlideCustom></SwiperSlideCustom>
       <SwiperSlideCustom></SwiperSlideCustom>
     </Swiper>
   );

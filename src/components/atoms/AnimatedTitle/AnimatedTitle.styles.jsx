@@ -179,6 +179,7 @@ export const DescContainer = styled.p`
   max-width: 450px;
   font-style: italic;
   background-color: ${COLORS.secondary};
+  color: black;
   border-radius: 20px;
   @media (max-width: 900px) {
     max-width: 300px;

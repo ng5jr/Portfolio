@@ -3,16 +3,16 @@ import COLORS from "../../../theme/constants/colors";
 
 const Scrolling = keyframes`
 	0%{
-		opacity: 1;
+	 opacity: 1;
 	 top: 0.3rem;
 	}
-	85%{
-			opacity: 1;
+	90%{
+	 opacity: 1;
 	 top: 0.9rem;
 	}
- 100%{
+  100%{
   	opacity: 0;
-   top: 0.9rem;
+    top: 0.9rem;
  }
 `;
 
@@ -50,7 +50,7 @@ export const Mouse = styled.div`
   position: relative;
   margin-right: 15px;
   & > div {
-    animation: 3s ease 0s infinite normal none running ${Scrolling};
+    animation: 2s ease 0s infinite normal none running ${Scrolling};
   }
 `;
 

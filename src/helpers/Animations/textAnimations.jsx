@@ -18,3 +18,12 @@ export const slideLeft = keyframes`
 		transform: translateX(-35px);
 	}
 `;
+
+export const slideRight = keyframes`
+	0%{
+		transform: translateX(150%);
+	}
+	100%{
+		transform: translateX(35px);
+	}
+`;

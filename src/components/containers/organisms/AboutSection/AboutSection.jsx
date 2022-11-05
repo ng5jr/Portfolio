@@ -11,7 +11,7 @@ import {
   DescriptionMore,
 } from "./AboutSection.styles";
 import AboutBanner from "../../../atoms/Banners/AboutMeBanner/AboutBanner";
-const HomeSection = ({ render }) => {
+const AboutSection = ({ render }) => {
   return (
     <PageWrapper>
       {render && (
@@ -54,4 +54,4 @@ const HomeSection = ({ render }) => {
   );
 };
 
-export default HomeSection;
+export default AboutSection;

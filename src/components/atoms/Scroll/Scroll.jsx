@@ -7,7 +7,14 @@ const Scroll = () => {
       <Mouse>
         <Wheel />
       </Mouse>
-      <ScrollText>Scroll</ScrollText>
+      <ScrollText>
+        <span>S</span>
+        <span>c</span>
+        <span>r</span>
+        <span>o</span>
+        <span>l</span>
+        <span>l</span>
+      </ScrollText>
     </ScrollWrapper>
   );
 };

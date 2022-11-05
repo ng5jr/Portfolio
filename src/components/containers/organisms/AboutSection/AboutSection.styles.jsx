@@ -1,6 +1,7 @@
 import styled, { css, keyframes } from "styled-components";
 import {
   showTitles,
+  slideRight,
   slideLeft,
 } from "../../../../helpers/Animations/textAnimations";
 import COLORS from "../../../../theme/constants/colors";
@@ -61,18 +62,25 @@ export const Description = styled.h2`
 `;
 
 export const DescriptionMore = styled.div`
-  padding: 0.5rem 1rem 1rem 3rem;
-  transform: translateX(-35px);
+  padding: 1rem 3rem 1rem 0.5rem;
+  transform: translateX(150%);
   width: 85vw;
+  animation: ${slideRight} 1s forwards;
+  animation-delay: 2s;
+  background-color: ${COLORS.primary};
+  border-radius: 25px;
+  filter: drop-shadow(30px 0px 4px #09090960);
+  margin-top: 1rem;
   p {
-    animation: ${showTitles} 1s forwards;
+    font-family: Bungee;
+    /* animation: ${showTitles} 1s forwards; */
     animation-delay: 1.8s;
     color: ${COLORS.secondary};
     font-size: 0.9rem;
     font-style: italic;
     line-height: 1.2rem;
-    opacity: 0;
+    /* opacity: 0; */
 
-    text-align: left;
+    text-align: right;
   }
 `;

@@ -9,7 +9,7 @@ import "swiper/css/pagination";
 import StorySection from "../StorySection/StorySection";
 import HomeSection from "../HomeSection/HomeSection";
 import AboutSection from "../AboutSection/AboutSection";
-
+import ProjectsSection from "../ProjectsSection/ProjectsSection";
 export const SwiperSlideCustom = styled(SwiperSlide)`
   height: calc(100vh) - 50px;
   position: relative;
@@ -19,8 +19,8 @@ export const SwiperSlideCustom = styled(SwiperSlide)`
 const MainSection = ({ setIndex, activeIndex, setScrollIcon }) => {
   const [canSwipe, setCanSwipe] = useState(true);
   const [worldSlide, setWorldSlide] = useState(false);
-  const [renderSecondSlide, setRenderSecondSlide] = useState(false);
-
+  const [renderAbout, setRenderAbout] = useState(false);
+  const [renderProjects, setRenderProjects] = useState(false);
   const swiperRef = useRef(null);
   // const renderMap = () => {
   //   // setTimeout(() => {
@@ -46,12 +46,13 @@ const MainSection = ({ setIndex, activeIndex, setScrollIcon }) => {
     }
   }, [canSwipe]);
 
+  const onTransitionAction = () => {};
+
   return (
     <Swiper
       ref={swiperRef}
       onTransitionStart={() => {
         setScrollIcon(false);
-        setRenderSecondSlide(true);
       }}
       onTransitionEnd={() => {
         setScrollIcon(true);
@@ -61,6 +62,12 @@ const MainSection = ({ setIndex, activeIndex, setScrollIcon }) => {
       mousewheel={true}
       onSlideChange={(activeIndex) => {
         changeSlide(activeIndex.realIndex);
+        if (activeIndex.realIndex === 1) {
+          setRenderAbout(true);
+        }
+        if (activeIndex.realIndex === 3) {
+          setRenderProjects(true);
+        }
       }}
       longSwipesMs={1000}
       style={{ paddingTop: "50px" }}
@@ -70,7 +77,7 @@ const MainSection = ({ setIndex, activeIndex, setScrollIcon }) => {
         <HomeSection />
       </SwiperSlideCustom>
       <SwiperSlideCustom>
-        <AboutSection render={renderSecondSlide}></AboutSection>
+        <AboutSection render={renderAbout}></AboutSection>
       </SwiperSlideCustom>
       <SwiperSlideCustom>
         <StorySection
@@ -79,7 +86,9 @@ const MainSection = ({ setIndex, activeIndex, setScrollIcon }) => {
           index={worldSlide}
         />
       </SwiperSlideCustom>
-      <SwiperSlideCustom>Projects</SwiperSlideCustom>
+      <SwiperSlideCustom>
+        <ProjectsSection render={renderProjects} />
+      </SwiperSlideCustom>
       <SwiperSlideCustom>Contact</SwiperSlideCustom>
     </Swiper>
   );

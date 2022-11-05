@@ -31,6 +31,20 @@ const ScrollAppear = keyframes`
  }
 `;
 
+const Bounce = keyframes`
+ 0%{
+  transform: translateY(0);
+ }
+
+ 50%{
+transform: translateY(-50%);
+ }
+ 100%{
+  transform: translateY(0);
+ }
+
+`;
+
 export const ScrollWrapper = styled.div`
   width: 100%;
   height: 30px;
@@ -72,13 +86,35 @@ export const Wheel = styled.div`
   transform: translateX(-50%);
 `;
 
-export const ScrollText = styled.p`
-  display: inline-block;
-  vertical-align: middle;
-  text-align: left;
-  font-family: "Bungee", cursive;
-  font-size: 0.9rem;
-  font-weight: 100;
-  line-height: 0.9rem;
+export const ScrollText = styled.div`
   color: ${COLORS.white};
+  span {
+    display: inline-block;
+    transform: translateY(0);
+    font-family: "Bungee", cursive;
+    font-size: 0.9rem;
+    font-weight: 100;
+    line-height: 0.9rem;
+    animation: 0.8s ease 0s forwards ${Bounce};
+    vertical-align: middle;
+    text-align: left;
+  }
+  span:nth-child(1) {
+    animation-delay: 5.5s;
+  }
+  span:nth-child(2) {
+    animation-delay: 5.7s;
+  }
+  span:nth-child(3) {
+    animation-delay: 5.9s;
+  }
+  span:nth-child(4) {
+    animation-delay: 6.1s;
+  }
+  span:nth-child(5) {
+    animation-delay: 6.3s;
+  }
+  span:nth-child(6) {
+    animation-delay: 6.5s;
+  }
 `;

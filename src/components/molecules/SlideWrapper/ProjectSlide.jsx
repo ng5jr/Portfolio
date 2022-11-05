@@ -10,6 +10,7 @@ import {
 } from "./ProjectSlide.styles";
 import { GoLinkExternal } from "react-icons/go";
 import { AiOutlineGithub } from "react-icons/ai";
+import { IoMdArrowDropup, IoMdArrowDropdown } from "react-icons/io";
 const ProjectSlide = ({ project }) => {
   const [showDesc, setShowDesc] = useState(false);
   return (
@@ -27,7 +28,7 @@ const ProjectSlide = ({ project }) => {
             setShowDesc(!showDesc);
           }}
         >
-          +
+          {showDesc ? <IoMdArrowDropdown /> : <IoMdArrowDropup />}
         </ButtonMore>
         <LinkTo
           title={"Link to the " + project.title + " project code"}

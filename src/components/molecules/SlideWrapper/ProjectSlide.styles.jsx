@@ -72,7 +72,6 @@ export const CaptionContainer = styled.figcaption`
 `;
 
 export const ButtonMore = styled.div`
-  height: 20px;
   display: grid;
   place-items: center;
   top: -20px;
@@ -84,6 +83,9 @@ export const ButtonMore = styled.div`
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   font-weight: bold;
+  svg {
+    font-size: 25px;
+  }
 `;
 
 export const DescriptionContainer = styled.div`

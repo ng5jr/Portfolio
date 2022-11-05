@@ -16,7 +16,7 @@ export const MenuWrapper = styled.menu`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 30px;
+  gap: 20px;
   width: 100%;
 `;
 

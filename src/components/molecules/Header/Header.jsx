@@ -6,7 +6,8 @@ import {
   BsFillPersonFill,
   BsPersonBoundingBox,
 } from "react-icons/bs";
-
+import { TbMessage2, TbMessage2Share } from "react-icons/tb";
+import { AiFillFolder, AiFillFolderOpen } from "react-icons/ai";
 import { BiWorld } from "react-icons/bi";
 import { TiWorld } from "react-icons/ti";
 const Header = ({ setIndex, activeIndex }) => {
@@ -36,6 +37,20 @@ const Header = ({ setIndex, activeIndex }) => {
         >
           {activeIndex === 2 && <BiWorld />}
           {activeIndex !== 2 && <TiWorld />}
+        </MenuButton>
+        <MenuButton
+          isActive={activeIndex === 3}
+          onClick={() => changeActiveIndex(3)}
+        >
+          {activeIndex === 3 && <AiFillFolderOpen />}
+          {activeIndex !== 3 && <AiFillFolder />}
+        </MenuButton>
+        <MenuButton
+          isActive={activeIndex === 4}
+          onClick={() => changeActiveIndex(4)}
+        >
+          {activeIndex === 4 && <TbMessage2Share />}
+          {activeIndex !== 4 && <TbMessage2 />}
         </MenuButton>
       </MenuWrapper>
     </HeaderWrapper>

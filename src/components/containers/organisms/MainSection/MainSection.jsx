@@ -16,9 +16,10 @@ export const SwiperSlideCustom = styled(SwiperSlide)`
   overflow: hidden;
 `;
 
-const MainSection = ({ setIndex, activeIndex, scrollIcon, setScrollIcon }) => {
+const MainSection = ({ setIndex, activeIndex, setScrollIcon }) => {
   const [canSwipe, setCanSwipe] = useState(true);
   const [worldSlide, setWorldSlide] = useState(false);
+  const [renderSecondSlide, setRenderSecondSlide] = useState(false);
 
   const swiperRef = useRef(null);
   // const renderMap = () => {
@@ -48,11 +49,12 @@ const MainSection = ({ setIndex, activeIndex, scrollIcon, setScrollIcon }) => {
   return (
     <Swiper
       ref={swiperRef}
-      onTransitionEnd={() => {
-        setScrollIcon(true);
-      }}
       onTransitionStart={() => {
         setScrollIcon(false);
+        setRenderSecondSlide(true);
+      }}
+      onTransitionEnd={() => {
+        setScrollIcon(true);
       }}
       direction={"vertical"}
       modules={[Navigation, Mousewheel]}
@@ -68,7 +70,7 @@ const MainSection = ({ setIndex, activeIndex, scrollIcon, setScrollIcon }) => {
         <HomeSection />
       </SwiperSlideCustom>
       <SwiperSlideCustom>
-        <AboutSection index={activeIndex}></AboutSection>
+        <AboutSection render={renderSecondSlide}></AboutSection>
       </SwiperSlideCustom>
       <SwiperSlideCustom>
         <StorySection
@@ -77,7 +79,8 @@ const MainSection = ({ setIndex, activeIndex, scrollIcon, setScrollIcon }) => {
           index={worldSlide}
         />
       </SwiperSlideCustom>
-      <SwiperSlideCustom></SwiperSlideCustom>
+      <SwiperSlideCustom>Projects</SwiperSlideCustom>
+      <SwiperSlideCustom>Contact</SwiperSlideCustom>
     </Swiper>
   );
 };

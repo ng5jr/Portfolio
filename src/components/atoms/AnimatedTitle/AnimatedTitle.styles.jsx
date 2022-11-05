@@ -1,5 +1,6 @@
 import styled, { css, keyframes } from "styled-components";
 import COLORS from "../../../theme/constants/colors";
+import { showTitles } from "../../../helpers/Animations/textAnimations";
 const gelatine = keyframes`
   
   from{
@@ -13,17 +14,6 @@ const gelatine = keyframes`
 	  transform: scale(1, 1);
 	  opacity: 1;
   }
-`;
-
-const showTitles = keyframes`
-	0%{
-		opacity: 0;
-		transform: translateY(3rem);
-	}
-	100%{
-		opacity: 1;
-		transform: translateY(0);
-	}
 `;
 
 export const TitleContainer = styled.div`

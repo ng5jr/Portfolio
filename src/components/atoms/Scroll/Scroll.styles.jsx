@@ -17,11 +17,17 @@ const Scrolling = keyframes`
 `;
 
 const ScrollAppear = keyframes`
- from{
+ 0%{
   opacity: 0;
  }
- to{
+ 25% {
   opacity: 1;
+ }
+75% {
+  opacity: 1;
+ }
+ 100%{
+  opacity: 0;
  }
 `;
 
@@ -35,7 +41,7 @@ export const ScrollWrapper = styled.div`
   position: absolute;
   bottom: 15px;
   opacity: 0;
-  animation: 2s ease 5s forwards ${ScrollAppear};
+  animation: 5s ease 5s forwards ${ScrollAppear};
 `;
 
 export const Mouse = styled.div`

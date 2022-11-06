@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import styled from "styled-components";
-import { Navigation, Pagination, Mousewheel } from "swiper";
+import { Navigation, Mousewheel } from "swiper";
 import "../../../../../src/styles.css";
 import React, { useRef, useState, useEffect } from "react";
 // Import Swiper styles

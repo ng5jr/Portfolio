@@ -1,6 +1,5 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import Header from "./components/molecules/Header/Header";
-import World from "./components/TestSpline";
 import MainSection from "./components/containers/organisms/MainSection/MainSection";
 import "./App.css";
 import Scroll from "./components/atoms/Scroll/Scroll";
@@ -11,13 +10,13 @@ function App() {
   return (
     <div className="App">
       <Header setIndex={setActiveIndex} activeIndex={activeIndex} />
-      {/* <MainSection
+      <MainSection
         setIndex={setActiveIndex}
         activeIndex={activeIndex}
         scrollIcon={scrollIcon}
         setScrollIcon={setScrollIcon}
       ></MainSection>
-      {scrollIcon && <Scroll />} */}
+      {scrollIcon && <Scroll />}
     </div>
   );
 }

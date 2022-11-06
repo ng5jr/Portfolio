@@ -17,7 +17,7 @@ const ProjectSlide = ({ project }) => {
     <SlideWrapper showDesc={showDesc}>
       <LazyLoadImage
         src={project.imgSrc}
-        // placeholderSrc={PlaceHolderHomeImage}
+        placeholderSrc={project.placeholderImg}
         alt="Nahuel working on the computer"
         effect="blur"
         className={showDesc ? "gray" : ""}

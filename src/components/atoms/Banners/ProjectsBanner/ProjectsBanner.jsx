@@ -10,7 +10,7 @@ function ProjectsBanner() {
     strokeColor,
     repeat
   ) {
-    let paths = document.querySelectorAll("g > path");
+    let paths = document.querySelectorAll("g#svgGroup > path");
     let mode = repeat ? "infinite" : "forwards";
     for (let i = 0; i < paths.length; i++) {
       const path = paths[i];

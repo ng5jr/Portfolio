@@ -1,10 +1,11 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   HomeSocial,
   HomeSocialLinks,
   HomeSocialLink,
 } from "./HomeSocials.styles";
+
+import { RiLinkedinFill, RiTwitterFill, RiInstagramLine } from "react-icons/ri";
 
 const HomeSocials = () => {
   return (
@@ -16,24 +17,21 @@ const HomeSocials = () => {
           target="_blank"
           title="Link to linkedin profile"
         >
-          <FontAwesomeIcon
-            className="social-1"
-            icon="fa-brands fa-linkedin-in"
-          />
+          <RiLinkedinFill className="social-1" />
         </HomeSocialLink>
         <HomeSocialLink
           href="https://twitter.com/nahuegiordano"
           target="_blank"
           title="Link to twitter profile"
         >
-          <FontAwesomeIcon className="social-2" icon="fa-brands fa-twitter" />
+          <RiTwitterFill className="social-2" />
         </HomeSocialLink>
         <HomeSocialLink
           href="https://www.instagram.com/nahuel.giordano/"
           target="_blank"
           title="Link to instagram profile"
         >
-          <FontAwesomeIcon className="social-3" icon="fa-brands fa-instagram" />
+          <RiInstagramLine className="social-3" />
         </HomeSocialLink>
       </HomeSocialLinks>
     </HomeSocial>

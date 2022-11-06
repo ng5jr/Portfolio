@@ -79,6 +79,7 @@ export const HomeSocialLink = styled.a`
   color: ${COLORS.secondary};
   height: 25px;
   width: 25px;
+  font-size: 18px;
   transform: translateY(0) scale(1.6);
   filter: drop-shadow(5px 0px 3px #09090994);
   will-change: transform;

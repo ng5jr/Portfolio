@@ -1,6 +1,5 @@
 import React from "react";
 import AboutImage from "../../../../assets/AboutImages/aboutme.webp";
-import PlaceHolderHomeImage from "../../../../assets/HomeImages/PlaceHolder_HomeImage.webp";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 import {

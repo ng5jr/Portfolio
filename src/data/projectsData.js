@@ -1,21 +1,31 @@
 import RealEstate from "../assets/ProjectsImages/Projects/real_state.webp";
+import RealEstatePlaceholder from "../assets/ProjectsImages/Projects/Placeholder/real_state_placeholder.webp";
 import MiniPopsImg from "../assets/ProjectsImages/Projects/mini_pops.webp";
+import MiniPopsImgPlaceholder from "../assets/ProjectsImages/Projects/Placeholder/mini_pops_placeholder.webp";
 import WebDevImg from "../assets/ProjectsImages/Projects/web_dev_info.webp";
+import WebDevImgPlaceholder from "../assets/ProjectsImages/Projects/Placeholder/web_dev_info_placeholder.webp";
 import ToDoImg from "../assets/ProjectsImages/Projects/to_do_app.webp";
+import ToDoImgPlaceholder from "../assets/ProjectsImages/Projects/Placeholder/to_do_app_placeholder.webp";
 import Delicious from "../assets/ProjectsImages/Projects/recipe_app.webp";
+import DeliciousPlaceholder from "../assets/ProjectsImages/Projects/Placeholder/recipe_app_placeholder.webp";
 import Avo from "../assets/ProjectsImages/Projects/avo_store.webp";
+import AvoPlaceholder from "../assets/ProjectsImages/Projects/Placeholder/avo_store_placeholder.webp";
 import Nmas from "../assets/ProjectsImages/Projects/nmas.webp";
+import NmasPlaceholder from "../assets/ProjectsImages/Projects/Placeholder/nmas_placeholder.webp";
 import PLants from "../assets/ProjectsImages/Projects/plantpedia.webp";
+import PLantsPlaceholder from "../assets/ProjectsImages/Projects/Placeholder/plantpedia_placeholder.webp";
+
 export const ProjectsInfo = [
   {
     id: 9,
     title: "N +",
     description:
-      "The brand-new Mexico's top broadcaster online news service. Design and layout integration with React and Next.js",
+      "The brand-new Mexico's top broadcaster online news service. Design and layout integration with React, styled-components and Next.js",
     imgSrc: Nmas,
     linkpage: "https://www.nmas.com.mx/",
     linkgithub: "https://www.nmas.com.mx/",
     descVisibile: false,
+    placeholderImg: NmasPlaceholder,
   },
   {
     id: 8,
@@ -27,6 +37,7 @@ export const ProjectsInfo = [
       "https://avo-store-5boevgucd-nahuelgiordano-hotmailcom.vercel.app/",
     linkgithub: "https://github.com/ng5jr/platzi-nextjs-avo",
     descVisibile: false,
+    placeholderImg: PLantsPlaceholder,
   },
   {
     id: 7,
@@ -38,6 +49,7 @@ export const ProjectsInfo = [
       "https://avo-store-5boevgucd-nahuelgiordano-hotmailcom.vercel.app/",
     linkgithub: "https://github.com/ng5jr/platzi-nextjs-avo",
     descVisibile: false,
+    placeholderImg: AvoPlaceholder,
   },
   {
     id: 1,
@@ -48,6 +60,7 @@ export const ProjectsInfo = [
     linkpage: "https://ng5jr.github.io/Web-Development-Info/",
     linkgithub: "https://github.com/ng5jr/Web-Development-Info",
     descVisibile: false,
+    placeholderImg: WebDevImgPlaceholder,
   },
   {
     id: 2,
@@ -58,6 +71,7 @@ export const ProjectsInfo = [
     linkpage: "https://ng5jr.github.io/app-to-do-v2",
     linkgithub: "https://github.com/ng5jr/app-to-do-v2",
     descVisibile: false,
+    placeholderImg: ToDoImgPlaceholder,
   },
   // {
   //   id: 3,
@@ -77,6 +91,7 @@ export const ProjectsInfo = [
     linkpage: "https://deliciousrecipess.netlify.app/",
     linkgithub: "https://github.com/ng5jr/Delicious",
     descVisibile: false,
+    placeholderImg: DeliciousPlaceholder,
   },
   {
     id: 5,
@@ -87,6 +102,7 @@ export const ProjectsInfo = [
     linkpage: "https://github.com/ng5jr/realestateapp",
     linkgithub: "https://github.com/ng5jr/realestateapp",
     descVisibile: false,
+    placeholderImg: RealEstatePlaceholder,
   },
   {
     id: 6,
@@ -97,5 +113,6 @@ export const ProjectsInfo = [
     linkpage: "https://ng5jr.github.io/miniPops2/",
     linkgithub: "https://github.com/ng5jr/miniPops2",
     descVisibile: false,
+    placeholderImg: MiniPopsImgPlaceholder,
   },
 ];

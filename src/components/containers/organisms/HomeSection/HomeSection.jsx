@@ -11,7 +11,7 @@ const HomeSection = () => {
       <HomeSocials />
       <LazyLoadImage
         src={HomeImage}
-        width={240}
+        width={230}
         height={250}
         alt="Nahuel working on the computer"
         className="home_image"

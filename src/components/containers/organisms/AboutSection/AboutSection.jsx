@@ -1,6 +1,8 @@
 import React from "react";
 import AboutImage from "../../../../assets/AboutImages/aboutme.webp";
+import AboutImagePlaceHolder from "../../../../assets/AboutImages/aboutme_placeholder.webp";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 import {
   PageWrapper,
@@ -10,6 +12,7 @@ import {
   DescriptionMore,
 } from "./AboutSection.styles";
 import AboutBanner from "../../../atoms/Banners/AboutMeBanner/AboutBanner";
+
 const AboutSection = ({ render }) => {
   return (
     <PageWrapper>
@@ -19,7 +22,7 @@ const AboutSection = ({ render }) => {
           <ImageWrapper>
             <LazyLoadImage
               src={AboutImage}
-              // placeholderSrc={PlaceHolderHomeImage}
+              placeholderSrc={AboutImagePlaceHolder}
               width={230}
               height={270}
               alt="Nahuel working on the computer"
@@ -27,13 +30,7 @@ const AboutSection = ({ render }) => {
               effect="blur"
             />
           </ImageWrapper>
-          {/* <AboutTitle>
-            My name is...
-            <span className="myname">
-              <span className="capital">N</span>ahuel{" "}
-              <span className="capital"> G</span>iordano
-            </span>
-          </AboutTitle> */}
+
           <AboutDataContainer>
             <Description>
               I am a 27 years old Frontend Developer, former Merchant Marine

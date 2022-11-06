@@ -20,11 +20,11 @@ export const PageWrapper = styled.div`
 `;
 
 export const ImageWrapper = styled.div`
+  animation: ${showImage} 1s forwards;
+  animation-delay: 1s;
   margin: 10px 0 0;
-  .home_image {
-    animation: ${showImage} 1s forwards;
-    animation-delay: 1s;
+  opacity: 0;
+  > .home_image {
     filter: drop-shadow(30px 0px 4px #09090960);
-    opacity: 0;
   }
 `;

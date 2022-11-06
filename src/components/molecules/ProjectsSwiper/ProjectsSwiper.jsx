@@ -9,7 +9,6 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 
 import { EffectCoverflow, Pagination, Navigation } from "swiper";
-import { useRef } from "react";
 
 export default function ProjectsSwiper() {
   const [projectsData, setProjectsData] = useState([]);

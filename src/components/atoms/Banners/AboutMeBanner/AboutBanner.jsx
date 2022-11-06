@@ -29,14 +29,14 @@ function AboutBanner() {
   useEffect(() => {
     setTimeout(() => {
       setTextAnimation(0.1, 2.7, 2, "linear", "#ffffff44", false);
-    }, 100);
+    }, 50);
   }, []);
 
   return (
     <svg
       className="svgContainer"
-      width="725.25"
-      height="112.202"
+      width="700"
+      height="100"
       max-width="400"
       viewBox="0 0 725.25 112.202"
       xmlns="http://www.w3.org/2000/svg"

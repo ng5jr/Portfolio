@@ -27,3 +27,12 @@ export const slideRight = keyframes`
 		transform: translateX(35px);
 	}
 `;
+
+export const slideRightContactSection = keyframes`
+	0%{
+		transform: translateX(150%);
+	}
+	100%{
+		transform: translateX(45%);
+	}
+`;

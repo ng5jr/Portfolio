@@ -15,7 +15,7 @@ function App() {
         activeIndex={activeIndex}
         scrollIcon={scrollIcon}
         setScrollIcon={setScrollIcon}
-      ></MainSection>
+      />
       {scrollIcon && <Scroll />}
     </div>
   );

@@ -10,6 +10,8 @@ import StorySection from "../StorySection/StorySection";
 import HomeSection from "../HomeSection/HomeSection";
 import AboutSection from "../AboutSection/AboutSection";
 import ProjectsSection from "../ProjectsSection/ProjectsSection";
+import ContactSection from "../ContactSection/ContactSection";
+
 export const SwiperSlideCustom = styled(SwiperSlide)`
   height: calc(100vh) - 50px;
   position: relative;
@@ -21,6 +23,7 @@ const MainSection = ({ setIndex, activeIndex, setScrollIcon }) => {
   const [worldSlide, setWorldSlide] = useState(false);
   const [renderAbout, setRenderAbout] = useState(false);
   const [renderProjects, setRenderProjects] = useState(false);
+  const [renderContact, setRenderContact] = useState(false);
   const swiperRef = useRef(null);
   // const renderMap = () => {
   //   // setTimeout(() => {
@@ -46,8 +49,6 @@ const MainSection = ({ setIndex, activeIndex, setScrollIcon }) => {
     }
   }, [canSwipe]);
 
-  const onTransitionAction = () => {};
-
   return (
     <Swiper
       ref={swiperRef}
@@ -67,6 +68,9 @@ const MainSection = ({ setIndex, activeIndex, setScrollIcon }) => {
         }
         if (activeIndex.realIndex === 3) {
           setRenderProjects(true);
+        }
+        if (activeIndex.realIndex === 4) {
+          setRenderContact(true);
         }
       }}
       longSwipesMs={1000}
@@ -89,7 +93,9 @@ const MainSection = ({ setIndex, activeIndex, setScrollIcon }) => {
       <SwiperSlideCustom>
         <ProjectsSection render={renderProjects} />
       </SwiperSlideCustom>
-      <SwiperSlideCustom>Contact</SwiperSlideCustom>
+      <SwiperSlideCustom>
+        <ContactSection setScrollIcon={setScrollIcon} render={renderContact} />
+      </SwiperSlideCustom>
     </Swiper>
   );
 };

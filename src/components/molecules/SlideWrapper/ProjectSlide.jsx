@@ -11,6 +11,7 @@ import {
 import { GoLinkExternal } from "react-icons/go";
 import { AiOutlineGithub } from "react-icons/ai";
 import { IoMdArrowDropup, IoMdArrowDropdown } from "react-icons/io";
+
 const ProjectSlide = ({ project }) => {
   const [showDesc, setShowDesc] = useState(false);
   return (
@@ -18,10 +19,10 @@ const ProjectSlide = ({ project }) => {
       <LazyLoadImage
         src={project.imgSrc}
         placeholderSrc={project.placeholderImg}
-        alt="Nahuel working on the computer"
-        effect="blur"
+        alt={"Image of " + project.title + " project"}
         className={showDesc ? "gray" : ""}
       />
+
       <CaptionContainer>
         <ButtonMore
           onClick={() => {

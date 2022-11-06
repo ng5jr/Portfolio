@@ -1,10 +1,12 @@
-import React, { Suspense } from "react";
+import React from "react";
 import ProjectsSwiper from "../../../molecules/ProjectsSwiper/ProjectsSwiper";
 import { PageWrapper } from "./ProjectsSection.styles";
 import ProjectsBanner from "../../../atoms/Banners/ProjectsBanner/ProjectsBanner";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { ImageWrapper } from "./ProjectsSection.styles";
 import ProjectsImage from "../../../../assets/ProjectsImages/meproject.webp";
+import ProjectsImagePlaceHolder from "../../../../assets/ProjectsImages/meproject_placeholder.webp";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const ProjectsSection = ({ render }) => {
   return (
@@ -15,7 +17,7 @@ const ProjectsSection = ({ render }) => {
           <ImageWrapper>
             <LazyLoadImage
               src={ProjectsImage}
-              // placeholderSrc={PlaceHolderHomeImage}
+              placeholderSrc={ProjectsImagePlaceHolder}
               width={280}
               height={223}
               alt="Nahuel working on the computer"

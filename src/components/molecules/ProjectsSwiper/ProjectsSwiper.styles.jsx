@@ -20,5 +20,15 @@ export const SwiperWrapper = styled.div`
   .swiper-slide-shadow-left {
     border-radius: 25px;
   }
+  .swiper-slide-visible {
+    transition: all 3s;
+    span {
+      filter: blur(5px);
+    }
+  }
+  .swiper-slide-active {
+    span {
+      filter: blur(0);
+    }
+  }
 `;
-

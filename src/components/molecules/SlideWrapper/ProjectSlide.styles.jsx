@@ -21,7 +21,8 @@ export const SlideWrapper = styled.figure`
     width: 100%;
   }
   .gray {
-    filter: grayscale(100%);
+    filter: grayscale(100%) blur(2px);
+
     transition: all 1s;
   }
   &:focus {

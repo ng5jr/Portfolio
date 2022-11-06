@@ -1,9 +1,10 @@
 import styled, { css, keyframes } from "styled-components";
 import {
   showTitles,
-  slideRight,
+  slideRightContactSection,
   slideLeft,
 } from "../../../../helpers/Animations/textAnimations";
+import { grow, bounce } from "../../../../helpers/Animations/objectAnimations";
 import COLORS from "../../../../theme/constants/colors";
 
 const showImage = keyframes`
@@ -31,6 +32,9 @@ export const ImageWrapper = styled.div`
   animation-delay: 0.5s;
   margin: 10px 0 0;
   opacity: 0;
+  width: 95vw;
+  display: grid;
+  place-items: center;
   .home_image {
     filter: drop-shadow(30px 0px 4px #09090960);
   }
@@ -62,10 +66,9 @@ export const Description = styled.h2`
 `;
 
 export const DescriptionMore = styled.div`
-  padding: 1rem 3rem 1rem 0.5rem;
+  padding: 1rem 3rem 1rem 1rem;
   transform: translateX(150%);
-  width: 85vw;
-  animation: ${slideRight} 1s forwards;
+  animation: ${slideRightContactSection} 1s forwards;
   animation-delay: 2s;
   background-color: ${COLORS.white};
   border-radius: 25px;
@@ -83,4 +86,29 @@ export const DescriptionMore = styled.div`
 
     text-align: right;
   }
+`;
+
+export const ContactImagesContainer = styled.div`
+  cursor: pointer;
+  position: absolute;
+  width: 3.5rem;
+  height: 3.5rem;
+  transform: scale(0);
+  animation: ${grow} 0.3s forwards;
+  animation-delay: ${(props) => props.delay};
+  top: ${(props) => props.positionX};
+  left: ${(props) => props.positionY};
+  @media (max-width: 1024px) {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+`;
+
+export const ContactImages = styled.img`
+  cursor: pointer;
+  width: 2.5rem;
+  height: auto;
+  animation: ${bounce} 2s ease infinite;
+  animation-delay: ${(props) => props.delay};
+  filter: drop-shadow(10px 0px 4px #09090960);
 `;

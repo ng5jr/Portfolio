@@ -11,13 +11,13 @@ function App() {
   return (
     <div className="App">
       <Header setIndex={setActiveIndex} activeIndex={activeIndex} />
-      <MainSection
+      {/* <MainSection
         setIndex={setActiveIndex}
         activeIndex={activeIndex}
         scrollIcon={scrollIcon}
         setScrollIcon={setScrollIcon}
       ></MainSection>
-      {scrollIcon && <Scroll />}
+      {scrollIcon && <Scroll />} */}
     </div>
   );
 }

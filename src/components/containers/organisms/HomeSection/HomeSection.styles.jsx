@@ -22,6 +22,7 @@ export const PageWrapper = styled.div`
     opacity: 0;
     filter: drop-shadow(30px 0px 4px #09090960);
     margin: 30px 0;
+    will-change: transform opacity;
     animation: ${showImage} 1s forwards;
     animation-delay: 0.5s;
   }

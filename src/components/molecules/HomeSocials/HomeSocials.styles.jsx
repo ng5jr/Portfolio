@@ -1,4 +1,4 @@
-import styled, { css, keyframes } from "styled-components";
+import styled, { keyframes } from "styled-components";
 import COLORS from "../../../theme/constants/colors";
 
 const showLinks = keyframes`
@@ -16,11 +16,11 @@ const showLinks = keyframes`
 const slideSocialContainer = keyframes`
 	0%{
 		transform: translateX(-200%);
-		z-index: -5;
+
 	}
 	100%{
 		transform: translateX(0);
-		z-index: 1;
+
 		}
 `;
 
@@ -31,7 +31,7 @@ export const HomeSocial = styled.div`
   display: flex;
   align-items: center;
   column-gap: 3.5rem;
-
+  will-change: transform;
   animation: ${slideSocialContainer} 1s ease-out forwards;
 
   @media (max-width: 768px) {
@@ -81,6 +81,7 @@ export const HomeSocialLink = styled.a`
   width: 25px;
   transform: translateY(0) scale(1.6);
   filter: drop-shadow(5px 0px 3px #09090994);
+  will-change: transform;
   .social-1 {
     animation: ${showLinks} 1s ease-out forwards;
     animation-delay: 0.7s;
@@ -98,16 +99,16 @@ export const HomeSocialLink = styled.a`
     height: 25px;
     width: 25px;
   }
-  &:hover {
+  /* &:hover {
     transform: scale(1.3) translateY(0.25rem);
-  }
+  } */
   @media (max-width: 768px) {
     margin-bottom: 1.5rem;
-    &:hover {
+    /* &:hover {
       transform: scale(1.3) translateY(0);
     }
     &:active {
       transform: scale(1.3) translateY(0.25rem);
-    }
+    } */
   }
 `;

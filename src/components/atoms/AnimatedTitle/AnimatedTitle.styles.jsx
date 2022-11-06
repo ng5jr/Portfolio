@@ -24,6 +24,7 @@ export const TitleContainer = styled.div`
   div {
     opacity: 0;
     display: inline-block;
+    will-change: transform opacity;
     animation: ${gelatine} 1s forwards;
   }
 
@@ -105,6 +106,7 @@ export const SubtitleContainer = styled.div`
     opacity: 0;
     display: inline-block;
     animation: ${gelatine} 1s forwards;
+    will-change: transform opacity;
   }
 
   .span-0 {
@@ -171,6 +173,7 @@ export const DescContainer = styled.p`
   background-color: ${COLORS.secondary};
   color: ${COLORS.background};
   border-radius: 20px;
+  will-change: transform opacity;
   @media (max-width: 900px) {
     max-width: 300px;
   }

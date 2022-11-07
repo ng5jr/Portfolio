@@ -2,30 +2,54 @@ import React from "react";
 import { useState } from "react";
 import { FiSettings } from "react-icons/fi";
 import { GoUnmute, GoMute } from "react-icons/go";
-import { RadialMenuWrapper } from "./RadialMenu.styles";
+import { FaFileDownload } from "react-icons/fa";
+import { useContext } from "react";
+import { AudioContext } from "../../../context/AudioContext";
+import {
+  RadialMenuWrapper,
+  SettingsWrapper,
+  OptionsWrapper,
+} from "./RadialMenu.styles";
+import audio from "../../../assets/Sounds/mixkit-video-game-retro-click-237.wav";
 import FullScreenButton from "../FullScreenButton/FullScreenButton";
 const RadialMenu = () => {
+  const [openMenu, setOpenMenu] = useState(false);
+  const { setAudioEnabled, audioEnabled } = useContext(AudioContext);
+  let settingsAudio = new Audio(audio);
+
+  const start = () => {
+    if (audioEnabled) {
+      settingsAudio.play();
+    }
+  };
+  const handleAudio = () => {
+    setAudioEnabled(!audioEnabled);
+  };
   return (
     <RadialMenuWrapper>
-      <div>
-        <input type="checkbox" id="toggle" />
-        <label htmlFor="toggle">
-          <span className="fa fa-navicon fa-2x">
-            <FiSettings />
-          </span>
-        </label>
-        <div className="container">
-          <button className="fa fa-home fa-2x deg5">
-            <FullScreenButton />
-          </button>
-          <button className="fa fa-comments fa-2x deg40">
-            <GoUnmute />
-          </button>
-          <button className="fa fa-heart fa-2x deg85">
-            <GoMute />
-          </button>
-        </div>
-      </div>
+      <SettingsWrapper
+        onClick={() => {
+          setOpenMenu(!openMenu);
+          start();
+        }}
+      >
+        <FiSettings />
+      </SettingsWrapper>
+      <OptionsWrapper x={3} open={openMenu}>
+        <FullScreenButton />
+      </OptionsWrapper>
+      <OptionsWrapper x={6} open={openMenu}>
+        <a
+          target="_blank"
+          href="https://drive.google.com/file/d/1pHHHyA8QXOKkxKR8YY4VCQArQCK1af6L/view?usp=share_link"
+        >
+          <FaFileDownload />
+        </a>
+      </OptionsWrapper>
+
+      <OptionsWrapper x={9} onClick={handleAudio} open={openMenu}>
+        {audioEnabled ? <GoUnmute /> : <GoMute />}
+      </OptionsWrapper>
     </RadialMenuWrapper>
   );
 };

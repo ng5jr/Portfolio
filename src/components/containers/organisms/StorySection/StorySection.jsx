@@ -1,29 +1,75 @@
-import React, { Suspense } from "react";
-import World from "../../../TestSpline";
-
+import React, { Suspense, useEffect, useRef, useState } from "react";
+import {
+  InformationWrapper,
+  PageWrapper,
+  InfoTitle,
+  ScrollDown,
+  ScrollUp,
+  CardWrapper,
+  InteractTitle,
+} from "./StorySection.styles";
+import Globe from "../../world/WorldGlobe";
+import { MdLocationOn } from "react-icons/md";
+import { FaArrowAltCircleDown, FaArrowAltCircleUp } from "react-icons/fa";
 const StorySection = ({ index, swipe, setSwipe }) => {
   const active = index;
-  return (
-    <div
-      // onTouchEnd={() => setSwipe(true)}
-      style={{
-        width: "fit-content",
-        height: "100%",
+  const scrollElement = useRef(null);
+  const [markerData, setMarkerData] = useState(undefined);
 
-        margin: "0 auto",
-      }}
-    >
+  return (
+    <PageWrapper>
       {active && (
-        <div
-          // onMouseEnter={() => setSwipe(false)}
-          // onMouseLeave={() => setSwipe(true)}
-          // onTouchEnd={() => setSwipe(false)}
-          className="swiper-no-swiping"
-        >
-          <World />
+        <div className="swiper-no-swiping">
+          <Globe setData={setMarkerData} />
         </div>
       )}
-    </div>
+      <CardWrapper>
+        {markerData ? (
+          <>
+            {" "}
+            <ScrollUp
+              onClick={() => {
+                scrollElement.current.scroll({
+                  top: 0,
+                  behavior: "smooth",
+                });
+              }}
+            >
+              <FaArrowAltCircleUp />
+            </ScrollUp>
+            <InformationWrapper ref={scrollElement}>
+              <InfoTitle>
+                LOCATION{" "}
+                <span>
+                  <MdLocationOn />
+                </span>
+                <p>{markerData.city}</p>
+              </InfoTitle>
+              <InfoTitle>
+                WHEN <p>{markerData.year}</p>
+              </InfoTitle>
+              <InfoTitle>
+                DESCRIPTION <p>{markerData.description}</p>
+              </InfoTitle>
+            </InformationWrapper>
+            <ScrollDown
+              onClick={() => {
+                scrollElement.current.scroll({
+                  top: 100,
+                  behavior: "smooth",
+                });
+              }}
+            >
+              <FaArrowAltCircleDown />
+            </ScrollDown>
+          </>
+        ) : (
+          <InteractTitle>
+            Story <span>Interact with the map to know my story</span>
+          </InteractTitle>
+        )}
+      </CardWrapper>
+    </PageWrapper>
   );
 };
 

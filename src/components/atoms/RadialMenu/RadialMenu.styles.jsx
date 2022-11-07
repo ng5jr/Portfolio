@@ -1,68 +1,58 @@
 import styled from "styled-components";
+import COLORS from "../../../theme/constants/colors";
+import { grow } from "../../../helpers/Animations/objectAnimations";
 
 export const RadialMenuWrapper = styled.div`
   position: absolute;
-  bottom: 1rem;
-  left: 1rem;
+  bottom: 2rem;
+  left: 2rem;
   z-index: 10;
-  transform: rotate(-90deg);
+  font-size: 1rem;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: all 1s;
   font-size: 1.5rem;
-  .container {
-    transform: translateY(-10px);
-    position: absolute;
+  transform: scale(0);
+  animation: ${grow} 1s forwards;
+  animation-delay: 1s;
+  color: black;
+  svg {
+    color: black;
   }
+  a {
+    text-decoration: none !important;
+    display: grid;
+    place-items: center;
+  }
+`;
 
-  button {
-    background: none;
-    border: none;
-    outline: none;
-    position: absolute;
-    opacity: 0;
-    transition: transform 0.5s, opacity 0.3s ease-out;
+export const SettingsWrapper = styled.div`
+  position: absolute;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: ${COLORS.secondary};
+  border-radius: 100%;
+  display: grid;
+  place-items: center;
+  box-shadow: 5px 5px 3px rgb(0 0 0);
+  transition: all 0.5s;
+  :hover {
+    box-shadow: 5px 3px 1px rgb(0 0 0);
   }
-  #toggle:checked ~ .container > .deg5 {
-    transform: rotate(5deg) translate(2.5em) rotate(-5deg);
-  }
+`;
 
-  #toggle:checked ~ .container > .deg40 {
-    transform: rotate(40deg) translate(2.3em) rotate(-40deg);
-  }
+export const OptionsWrapper = styled.div`
+  position: absolute;
+  z-index: -5;
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: white;
+  border-radius: 100%;
 
-  #toggle:checked ~ .container > .deg85 {
-    transform: rotate(85deg) translate(2.5em) rotate(-85deg);
-  }
-
-  #toggle:checked ~ .container > button {
-    opacity: 1 !important;
-    position: fixed;
-  }
-
-  #toggle:checked ~ .container > button {
-    opacity: 1 !important;
-    position: fixed;
-  }
-
-  #toggle:checked ~ .container > button:hover {
-    cursor: pointer;
-  }
-
-  label:hover {
-    cursor: pointer;
-  }
-
-  #toggle {
-    display: none;
-  }
-
-  .fa-home:hover {
-    color: #55cc70;
-  }
-
-  .fa-comments:hover {
-    color: #0099e5;
-  }
-
-  .fa-heart:hover {
-    color: tomato;
-  }
+  transform: ${({ open, x, y }) =>
+    open ? `translateX(${x}rem) rotate(360deg)` : ""};
+  transition: all 1s;
 `;

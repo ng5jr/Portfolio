@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import { AudioContext } from "../../../context/AudioContext";
 import { HeaderWrapper, MenuWrapper, MenuButton } from "./Header.styles";
 import { FaHouseUser } from "react-icons/fa";
 import {
@@ -10,13 +11,22 @@ import { TbMessage2, TbMessage2Share } from "react-icons/tb";
 import { AiFillFolder, AiFillFolderOpen } from "react-icons/ai";
 import { BiWorld } from "react-icons/bi";
 import { TiWorld } from "react-icons/ti";
+import audio from "../../../assets/Sounds/mixkit-single-classic-click-1116.wav";
 const Header = ({ setIndex, activeIndex }) => {
+  const { setAudioEnabled, audioEnabled } = useContext(AudioContext);
   const changeActiveIndex = (newIndex) => {
     setIndex(newIndex);
   };
-
   const vibrate = () => {
     window.navigator.vibrate(50);
+  };
+
+  let settingsAudio = new Audio(audio);
+
+  const playAudio = () => {
+    if (audioEnabled) {
+      settingsAudio.play();
+    }
   };
   return (
     <HeaderWrapper>
@@ -26,6 +36,7 @@ const Header = ({ setIndex, activeIndex }) => {
           onClick={() => {
             changeActiveIndex(0);
             vibrate();
+            playAudio();
           }}
         >
           {activeIndex === 0 && <FaHouseUser />}
@@ -36,6 +47,7 @@ const Header = ({ setIndex, activeIndex }) => {
           onClick={() => {
             changeActiveIndex(1);
             vibrate();
+            playAudio();
           }}
         >
           {activeIndex === 1 && <BsPersonBoundingBox />}
@@ -46,6 +58,7 @@ const Header = ({ setIndex, activeIndex }) => {
           onClick={() => {
             changeActiveIndex(2);
             vibrate();
+            playAudio();
           }}
         >
           {activeIndex === 2 && <BiWorld />}
@@ -56,6 +69,7 @@ const Header = ({ setIndex, activeIndex }) => {
           onClick={() => {
             changeActiveIndex(3);
             vibrate();
+            playAudio();
           }}
         >
           {activeIndex === 3 && <AiFillFolderOpen />}
@@ -66,6 +80,7 @@ const Header = ({ setIndex, activeIndex }) => {
           onClick={() => {
             changeActiveIndex(4);
             vibrate();
+            playAudio();
           }}
         >
           {activeIndex === 4 && <TbMessage2Share />}

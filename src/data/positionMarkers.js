@@ -1,0 +1,86 @@
+export default [
+  {
+    color: "red",
+    city: "Necochea, Argentina",
+    lat: -38.5363646,
+    lng: -58.7203427,
+    size: 25,
+    radius: 5,
+    alt: 0.11,
+    year: "1995 - now",
+    description:
+      "I was born in Necochea in 1995 and I've been living there on and off until now",
+  },
+  {
+    color: "red",
+    city: "Buenos Aires, Argentina",
+    lat: -34.615759,
+    lng: -58.5033449,
+    size: 25,
+    radius: 5,
+    alt: 0.1,
+    year: "2014-2018",
+    description:
+      "At the age of 18 I moved to Buenos Aires to start my studies. I spent 3 years attending to the Nautical Institute to become a Merchant Marine Officer. I finally graduated in 2018.",
+  },
+  {
+    color: "red",
+    city: "Basilicata, Italy",
+    lat: 40.0808854,
+    lng: 16.2000964,
+    size: 25,
+    radius: 5,
+    alt: 0.1,
+    year: "N/A",
+    description:
+      "I have neved lived there, but that's where I came from. My grandparents emigrated to Argentina from the Basilicata Province in Italy after the 2nd World War.",
+  },
+  {
+    color: "red",
+    city: "Baltimore, USA",
+    lat: 39.2827433,
+    lng: -76.6171139,
+    size: 25,
+    radius: 5,
+    alt: 0.1,
+    year: "2017",
+    description:
+      "I joined my first Cruise Ship in Baltimore as part of my cadetship. It was the Royal Caribbean Grandeur of the Seas, where I sailed for more than 6 months across US and the Caribbean",
+  },
+  {
+    color: "red",
+    city: "Galveston, USA",
+    lat: 29.2335042,
+    lng: -95.0133978,
+    size: 25,
+    radius: 5,
+    alt: 0.1,
+    year: "2019",
+    description:
+      "After graduation, I joined as 2nd Officer onboard the Royal Caribbean Cruise Ship Liberty of the Seas, sailing the Caribbean Seas for 3 years.",
+  },
+  {
+    color: "red",
+    city: "Cozumel, Mexico",
+    lat: 20.5109719,
+    lng: -86.9621068,
+    size: 25,
+    radius: 5,
+    alt: 0.1,
+    year: "2020",
+    description:
+      "During my time onboard I travel to Cozumel many times and made an amazing friend with whom I opened a bussiness in Mexico : Mini Pops",
+  },
+  {
+    color: "red",
+    city: "Montevideo, Uruguay",
+    lat: 20.5109719,
+    lng: -86.9621068,
+    size: 25,
+    radius: 5,
+    alt: 0.1,
+    year: "2020",
+    description:
+      "During my time onboard I travel to Cozumel many times and made an amazing friend with whom I opened a bussiness in Mexico : Mini Pops",
+  },
+];

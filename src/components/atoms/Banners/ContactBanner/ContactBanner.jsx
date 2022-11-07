@@ -29,7 +29,7 @@ function ContactTitle() {
   useEffect(() => {
     setTimeout(() => {
       setTextAnimation(0.1, 2.7, 2, "linear", "#ffffff44", false);
-    }, 100);
+    }, 50);
   }, []);
 
   return (

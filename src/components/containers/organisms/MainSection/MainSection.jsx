@@ -75,6 +75,8 @@ const MainSection = ({ setIndex, activeIndex, setScrollIcon }) => {
       }}
       longSwipesMs={1000}
       style={{ paddingTop: "50px" }}
+      edgeSwipeDetection={true}
+
       // onAfterInit={renderMap}
     >
       <SwiperSlideCustom>

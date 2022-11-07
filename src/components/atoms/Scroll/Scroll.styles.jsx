@@ -56,6 +56,10 @@ export const ScrollWrapper = styled.div`
   bottom: 15px;
   opacity: 0;
   animation: 5s ease 5s forwards ${ScrollAppear};
+  @media (min-width: 1200px) {
+    right: 2rem;
+    width: unset;
+  }
 `;
 
 export const Mouse = styled.div`

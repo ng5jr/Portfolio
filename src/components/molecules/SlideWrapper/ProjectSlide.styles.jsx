@@ -8,7 +8,6 @@ import COLORS from "../../../theme/constants/colors";
 export const SlideWrapper = styled.figure`
   border-radius: 25px;
   display: grid;
-
   height: 100%;
   overflow: hidden;
   place-items: center;
@@ -110,11 +109,22 @@ export const DescriptionContainer = styled.div`
   p {
     color: ${COLORS.white};
 
-    font-size: 1rem;
     text-align: center;
     padding: 0.5rem;
-    line-height: 2rem;
+
     margin-bottom: 2rem;
+  }
+  @media (min-width: 0px) {
+    p {
+      font-size: 1rem;
+      line-height: 2rem;
+    }
+  }
+  @media (min-width: 768px) {
+    p {
+      font-size: 1.3rem;
+      line-height: 2.5rem;
+    }
   }
 `;
 

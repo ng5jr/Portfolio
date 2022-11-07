@@ -1,26 +1,23 @@
 import styled, { css, keyframes } from "styled-components";
 import COLORS from "../../../theme/constants/colors";
-import { showTitles } from "../../../helpers/Animations/textAnimations";
-const gelatine = keyframes`
-  
-  from{
-	  transform: scale(1, 1);
-	  opacity: 0;
-  }
-  25% { transform: scale(0.9, 1.1); }
-  50% { transform: scale(1.1, 0.9); }
-  75% { transform: scale(0.95, 1.05); }
-  to{
-	  transform: scale(1, 1);
-	  opacity: 1;
-  }
-`;
+import {
+  showTitles,
+  gelatine,
+} from "../../../helpers/Animations/textAnimations";
 
 export const TitleContainer = styled.div`
-  font-size: 2.8rem;
+  filter: drop-shadow(15px 0px 3px #09090994);
   font-weight: bold;
   transition: all 0.5s;
-  filter: drop-shadow(15px 0px 3px #09090994);
+  @media (min-width: 0px) {
+    font-size: 2.8rem;
+  }
+  @media (min-width: 768px) {
+    font-size: 4rem;
+  }
+  @media (min-width: 1200px) {
+    font-size: 5rem;
+  }
   div {
     opacity: 0;
     display: inline-block;
@@ -95,12 +92,21 @@ export const TitleContainer = styled.div`
 `;
 
 export const SubtitleContainer = styled.div`
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  font-size: 2rem;
-  font-weight: bold;
-  transition: all 0.5s;
   filter: drop-shadow(15px 0px 3px #09090994);
+  font-weight: bold;
+
+  transition: all 0.5s;
+  @media (min-width: 0px) {
+    font-size: 2rem;
+    margin: 1rem 0;
+  }
+  @media (min-width: 768px) {
+    font-size: 3rem;
+    margin: unset;
+  }
+  @media (min-width: 1200px) {
+    font-size: 3.5rem;
+  }
 
   span {
     opacity: 0;
@@ -161,39 +167,34 @@ export const SubtitleContainer = styled.div`
 `;
 
 export const DescContainer = styled.p`
-  /* font-family: "Poppins", sans-serif; */
-  font-family: "Permanent Marker", cursive;
-  opacity: 0;
   animation: ${showTitles} 1s forwards;
   animation-delay: 3s;
-  font-size: 1.2rem;
-  line-height: 1.9rem;
-  max-width: 450px;
-  font-style: italic;
   background-color: ${COLORS.secondary};
-  color: ${COLORS.background};
   border-radius: 20px;
+  box-shadow: 5px 5px 3px rgb(0, 0, 0);
+  color: ${COLORS.background};
+  font-family: "Permanent Marker", cursive;
+  font-style: italic;
+  opacity: 0;
+  text-align: center;
   will-change: transform opacity;
-  @media (max-width: 900px) {
-    max-width: 300px;
-  }
-  @media (max-width: 768px) {
-    text-align: center;
-  }
-  @media (max-width: 600px) {
+
+  @media (min-width: 0px) {
     font-size: 1.2rem;
-    text-align: center;
-    width: fit-content;
-    filter: drop-shadow(15px 0px 3px #09090994);
-    padding: 10px;
-    max-width: 85vw;
+    line-height: 1.9rem;
+    padding: 0.5rem;
+    max-width: 450px;
+    width: 85vw;
   }
-  /* &::before {
-    content: "{ ";
-    color: var(--secondaryColor);
+  @media (min-width: 768px) {
+    font-size: 2rem;
+    line-height: 2.3rem;
+    padding: 0.8rem;
+    margin-top: 1rem;
+    max-width: 500px;
   }
-  &::after {
-    content: " }";
-    color: var(--secondaryColor);
-  } */
+  @media (min-width: 1200px) {
+    padding: 1rem;
+    max-width: 650px;
+  }
 `;

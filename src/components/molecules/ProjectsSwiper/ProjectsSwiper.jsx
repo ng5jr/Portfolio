@@ -32,12 +32,13 @@ export default function ProjectsSwiper() {
         coverflowEffect={{
           rotate: 50,
           stretch: 0,
-          depth: 100,
+          depth: 1000,
           modifier: 1,
         }}
         pagination={true}
         modules={[EffectCoverflow]}
         className="mySwiper projects_swiper"
+        slideToClickedSlide={true}
       >
         {projectsData.map((project) => {
           return (

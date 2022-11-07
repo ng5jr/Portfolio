@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import AboutImage from "../../../../assets/AboutImages/aboutme.webp";
 import AboutImagePlaceHolder from "../../../../assets/AboutImages/aboutme_placeholder.webp";
 import { LazyLoadImage } from "react-lazy-load-image-component";
@@ -12,8 +12,10 @@ import {
   DescriptionMore,
 } from "./AboutSection.styles";
 import AboutBanner from "../../../atoms/Banners/AboutMeBanner/AboutBanner";
+import { DeviceContext } from "../../../../context/DeviceContext";
 
 const AboutSection = ({ render }) => {
+  const { isMobile, isTablet, isDesktop } = useContext(DeviceContext);
   return (
     <PageWrapper>
       {render && (
@@ -23,8 +25,8 @@ const AboutSection = ({ render }) => {
             <LazyLoadImage
               src={AboutImage}
               placeholderSrc={AboutImagePlaceHolder}
-              width={230}
-              height={270}
+              width={isMobile ? 230 : 300}
+              height={isMobile ? 270 : 352}
               alt="Nahuel working on the computer"
               className="home_image"
               effect="blur"

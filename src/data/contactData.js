@@ -25,7 +25,7 @@ export const ContactData = [
     src: facebook3d,
     containerDelay: "2s",
     positionX: "60%",
-    positionY: "6%",
+    positionY: "15%",
   },
   {
     name: "Instagram",
@@ -34,8 +34,8 @@ export const ContactData = [
     delay: "1.3s",
     src: igimg,
     containerDelay: "2.5s",
-    positionX: "60%",
-    positionY: "61%",
+    positionX: "70%",
+    positionY: "75%",
   },
   {
     name: "Github",
@@ -45,7 +45,7 @@ export const ContactData = [
     src: github3d,
     containerDelay: "3s",
     positionX: "20%",
-    positionY: "58%",
+    positionY: "65%",
   },
   {
     name: "Twitter",
@@ -54,7 +54,7 @@ export const ContactData = [
     delay: "0.8s",
     src: twitter3d,
     containerDelay: "3.5s",
-    positionX: "80%",
+    positionX: "85%",
     positionY: "23%",
   },
   {
@@ -65,7 +65,7 @@ export const ContactData = [
     src: linkedin,
     containerDelay: "4s",
     positionX: "35%",
-    positionY: "8%",
+    positionY: "14%",
   },
   {
     name: "E-mail",
@@ -74,7 +74,7 @@ export const ContactData = [
     delay: "0.4s",
     src: mail3d,
     containerDelay: "4.5s",
-    positionX: "40%",
+    positionX: "45%",
     positionY: "68%",
   },
 ];

@@ -15,10 +15,12 @@ const showLinks = keyframes`
 
 const slideSocialContainer = keyframes`
 	0%{
+    opacity: 0;
 		transform: translateX(-200%);
 
 	}
 	100%{
+    opacity: 1;
 		transform: translateX(0);
 
 		}
@@ -26,19 +28,19 @@ const slideSocialContainer = keyframes`
 
 export const HomeSocial = styled.div`
   position: absolute;
-  top: 3rem;
 
+  opacity: 0;
   display: flex;
   align-items: center;
   column-gap: 3.5rem;
   will-change: transform;
   animation: ${slideSocialContainer} 1s ease-out forwards;
-
-  @media (max-width: 768px) {
-    left: 1rem;
+  animation-delay: 2s;
+  left: 1rem;
+  top: -2rem;
+  transform: scale(0.8);
+  @media (min-width: 768px) {
     top: -1rem;
-    transform: scale(0.8);
-    animation: ${slideSocialContainer} 0.8s ease-out forwards;
   }
 `;
 
@@ -47,28 +49,9 @@ export const HomeSocialLinks = styled.div`
   align-items: center;
   justify-content: center;
   column-gap: 1rem;
-  h3 {
-    display: inline;
-    margin-right: 20px;
-    font-weight: 400;
-  }
-  h3::after {
-    content: "";
-    position: absolute;
-    width: 1rem;
-    height: 2px;
-    background-color: white;
-    top: 50%;
-    right: 50%;
-    margin-left: 5px;
-  }
-  @media (max-width: 768px) {
-    margin-top: 2rem;
-    flex-direction: column;
-    h3 {
-      display: none;
-    }
-  }
+
+  margin-top: 2rem;
+  flex-direction: column;
 `;
 
 export const HomeSocialLink = styled.a`
@@ -85,15 +68,15 @@ export const HomeSocialLink = styled.a`
   will-change: transform;
   .social-1 {
     animation: ${showLinks} 1s ease-out forwards;
-    animation-delay: 0.7s;
+    animation-delay: 2.7s;
   }
   .social-2 {
     animation: ${showLinks} 1s ease-out forwards;
-    animation-delay: 1s;
+    animation-delay: 3s;
   }
   .social-3 {
     animation: ${showLinks} 1s ease-out forwards;
-    animation-delay: 1.3s;
+    animation-delay: 3.3s;
   }
 
   img {
@@ -103,13 +86,12 @@ export const HomeSocialLink = styled.a`
   /* &:hover {
     transform: scale(1.3) translateY(0.25rem);
   } */
-  @media (max-width: 768px) {
-    margin-bottom: 1.5rem;
-    /* &:hover {
+
+  margin-bottom: 1.5rem;
+  /* &:hover {
       transform: scale(1.3) translateY(0);
     }
     &:active {
       transform: scale(1.3) translateY(0.25rem);
     } */
-  }
 `;

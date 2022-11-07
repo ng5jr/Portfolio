@@ -11,7 +11,6 @@ const HomeSocials = () => {
   return (
     <HomeSocial>
       <HomeSocialLinks>
-        <h3>Follow Me </h3>
         <HomeSocialLink
           href="https://www.linkedin.com/in/nahuel-giordano/"
           target="_blank"

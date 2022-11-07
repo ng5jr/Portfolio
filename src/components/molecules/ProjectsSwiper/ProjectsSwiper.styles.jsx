@@ -31,4 +31,22 @@ export const SwiperWrapper = styled.div`
       filter: blur(0);
     }
   }
+  @media (min-width: 0px) {
+    .projects_swiper {
+      height: 300px;
+    }
+    .projects_slide {
+      width: 300px;
+      height: 300px;
+    }
+  }
+  @media (min-width: 768px) {
+    .projects_swiper {
+      height: 400px;
+    }
+    .projects_slide {
+      width: 400px;
+      height: 400px;
+    }
+  }
 `;

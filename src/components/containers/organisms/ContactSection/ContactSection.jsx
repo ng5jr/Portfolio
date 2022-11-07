@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import ContactMeImage from "../../../../assets/ContactImages/meimg.webp";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
+import ButtonCv from "../../../atoms/ButtonCv/ButtonCv";
 
 import {
   PageWrapper,
@@ -16,7 +17,9 @@ import ContactBanner from "../../../atoms/Banners/ContactBanner/ContactBanner";
 
 const ContactSection = ({ render, setScrollIcon }) => {
   if (render) {
-    setScrollIcon(false);
+    setTimeout(() => {
+      setScrollIcon(false);
+    }, 1500);
   }
 
   const [contactData, setContactData] = useState([]);
@@ -67,6 +70,7 @@ const ContactSection = ({ render, setScrollIcon }) => {
               );
             })}
           </ImageWrapper>
+
           <AboutDataContainer>
             <Description>
               Feel free to get in touch at any time to discuss our next project
@@ -76,6 +80,7 @@ const ContactSection = ({ render, setScrollIcon }) => {
           <DescriptionMore>
             <p>Thanks for passing by!</p>
           </DescriptionMore>
+          <ButtonCv />
         </>
       )}
     </PageWrapper>

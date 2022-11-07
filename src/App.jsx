@@ -4,6 +4,8 @@ import MainSection from "./components/containers/organisms/MainSection/MainSecti
 import "./App.css";
 import Scroll from "./components/atoms/Scroll/Scroll";
 import { DeviceProvider } from "./context/DeviceContext";
+import FullScreenButton from "./components/atoms/FullScreenButton/FullScreenButton";
+
 function App() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [scrollIcon, setScrollIcon] = useState(true);
@@ -11,6 +13,7 @@ function App() {
   return (
     <div className="App">
       <DeviceProvider>
+        <FullScreenButton />
         <Header setIndex={setActiveIndex} activeIndex={activeIndex} />
         <MainSection
           setIndex={setActiveIndex}

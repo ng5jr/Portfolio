@@ -38,8 +38,9 @@ const RadialMenu = () => {
       <OptionsWrapper x={3} open={openMenu}>
         <FullScreenButton />
       </OptionsWrapper>
-      <OptionsWrapper x={6} open={openMenu}>
+      <OptionsWrapper x={9} open={openMenu}>
         <a
+          title="Link to Geronimo Nahuel Giordano Resume"
           target="_blank"
           href="https://drive.google.com/file/d/1pHHHyA8QXOKkxKR8YY4VCQArQCK1af6L/view?usp=share_link"
         >
@@ -47,7 +48,7 @@ const RadialMenu = () => {
         </a>
       </OptionsWrapper>
 
-      <OptionsWrapper x={9} onClick={handleAudio} open={openMenu}>
+      <OptionsWrapper x={6} onClick={handleAudio} open={openMenu}>
         {audioEnabled ? <GoUnmute /> : <GoMute />}
       </OptionsWrapper>
     </RadialMenuWrapper>

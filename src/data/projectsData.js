@@ -14,8 +14,20 @@ import Nmas from "../assets/ProjectsImages/Projects/nmas.webp";
 import NmasPlaceholder from "../assets/ProjectsImages/Projects/Placeholder/nmas_placeholder.webp";
 import PLants from "../assets/ProjectsImages/Projects/plantpedia.webp";
 import PLantsPlaceholder from "../assets/ProjectsImages/Projects/Placeholder/plantpedia_placeholder.webp";
-
+import Portfolio from "../assets/ProjectsImages/Projects/portfolio.webp";
+import PortfolioPlaceholder from "../assets/ProjectsImages/Projects/Placeholder/portfolio_placeholder.webp";
 export const ProjectsInfo = [
+  {
+    id: 10,
+    title: "Portfolio",
+    description:
+      "My latest project. Full responsive and interactive website created using React.js, styled-components, Swiper.js three.js and react-globe.js",
+    imgSrc: Portfolio,
+    linkpage: "https://www.nmas.com.mx/",
+    linkgithub: "https://www.nmas.com.mx/",
+    descVisibile: false,
+    placeholderImg: PortfolioPlaceholder,
+  },
   {
     id: 9,
     title: "N +",
@@ -73,15 +85,6 @@ export const ProjectsInfo = [
     descVisibile: false,
     placeholderImg: ToDoImgPlaceholder,
   },
-  // {
-  //   id: 3,
-  //   title: "Password Gen",
-  //   description:
-  //     "A password generator website using Vanilla Javascript with the option to be added as Chrome Extension for better accessibility.",
-  //   imgSrc: PassGen,
-  //   linkpage: "https://ng5jr.github.io/Passsword-Generator/",
-  //   linkgithub: "https://github.com/ng5jr/Passsword-Generator",
-  // },
   {
     id: 4,
     title: "Recipes App",

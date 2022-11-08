@@ -1,5 +1,6 @@
 import styled, { css, keyframes } from "styled-components";
 import COLORS from "../../../../theme/constants/colors";
+import { showSwiperProjects } from "../../../../helpers/Animations/objectAnimations";
 export const PageWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -15,11 +16,24 @@ export const CardWrapper = styled.div`
   box-shadow: 5px 5px 3px rgb(0 0 0);
   position: relative;
   display: flex;
+  opacity: 0;
+  animation: ${showSwiperProjects} 1s forwards;
+  animation-delay: 0.5s;
   @media (min-width: 0px) {
     height: 200px;
     padding: 1rem;
     overflow: hidden;
     width: 80vw;
+  }
+
+  @media (min-width: 768px) {
+    height: fit-content;
+    min-height: 200px;
+    padding: 2rem;
+    width: 400px;
+
+  }
+  @media (min-width: 1200px) {
   }
 `;
 
@@ -53,9 +67,22 @@ export const InformationWrapper = styled.div`
     }
   }
   @media (min-width: 768px) {
-    height: 300px;
-    padding: 2.5rem 2.5rem 4.5rem;
-    width: 500px;
+    width: 100%;
+    overflow: visible;
+  }
+  @media (min-width: 1200px) {
+  }
+`;
+
+export const TopTitles = styled.div`
+  display: flex;
+  @media (min-width: 0px) {
+    flex-direction: column;
+  }
+  @media (min-width: 768px) {
+    flex-direction: row;
+    gap: 10rem;
+    width: 100%;
   }
   @media (min-width: 1200px) {
   }
@@ -93,6 +120,9 @@ export const ScrollUp = styled.div`
   top: 0.5rem;
   cursor: pointer;
   color: ${COLORS.primary};
+  @media (min-width: 1200px) {
+    display: none;
+  }
 `;
 export const ScrollDown = styled.div`
   bottom: 0rem;
@@ -101,4 +131,7 @@ export const ScrollDown = styled.div`
   position: absolute;
   cursor: pointer;
   color: ${COLORS.primary};
+  @media (min-width: 1200px) {
+    display: none;
+  }
 `;

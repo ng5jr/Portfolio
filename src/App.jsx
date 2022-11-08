@@ -15,7 +15,6 @@ function App() {
     <div className="App">
       <DeviceProvider>
         <AudioProvider>
-          <RadialMenu />
           <Header setIndex={setActiveIndex} activeIndex={activeIndex} />
           <MainSection
             setIndex={setActiveIndex}
@@ -24,6 +23,7 @@ function App() {
             setScrollIcon={setScrollIcon}
           />
           {scrollIcon && <Scroll />}
+          <RadialMenu />
         </AudioProvider>
       </DeviceProvider>
     </div>

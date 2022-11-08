@@ -25,11 +25,7 @@ const MainSection = ({ setIndex, activeIndex, setScrollIcon }) => {
   const [renderProjects, setRenderProjects] = useState(false);
   const [renderContact, setRenderContact] = useState(false);
   const swiperRef = useRef(null);
-  // const renderMap = () => {
-  //   // setTimeout(() => {
-  //   //   setWorldSlide(true);
-  //   // }, 4000);
-  // };
+
   const changeSlide = (index) => {
     setIndex(index);
   };

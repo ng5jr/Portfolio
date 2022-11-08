@@ -32,7 +32,7 @@ export const ProjectsInfo = [
     id: 9,
     title: "N +",
     description:
-      "The brand-new Mexico's top broadcaster online news service. Design and layout integration with React, styled-components and Next.js",
+      "The brand-new Mexico's top broadcaster online news service. Design and layout integration with React.js, Typescript styled-components and Next.js",
     imgSrc: Nmas,
     linkpage: "https://www.nmas.com.mx/",
     linkgithub: "https://www.nmas.com.mx/",

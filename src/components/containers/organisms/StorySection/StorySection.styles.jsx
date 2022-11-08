@@ -31,7 +31,6 @@ export const CardWrapper = styled.div`
     min-height: 200px;
     padding: 2rem;
     width: 400px;
-
   }
   @media (min-width: 1200px) {
   }
@@ -68,7 +67,6 @@ export const InformationWrapper = styled.div`
   }
   @media (min-width: 768px) {
     width: 100%;
-    overflow: visible;
   }
   @media (min-width: 1200px) {
   }
@@ -120,8 +118,8 @@ export const ScrollUp = styled.div`
   top: 0.5rem;
   cursor: pointer;
   color: ${COLORS.primary};
+  /* display: none; */
   @media (min-width: 1200px) {
-    display: none;
   }
 `;
 export const ScrollDown = styled.div`
@@ -131,7 +129,7 @@ export const ScrollDown = styled.div`
   position: absolute;
   cursor: pointer;
   color: ${COLORS.primary};
+  /* display: none; */
   @media (min-width: 1200px) {
-    display: none;
   }
 `;

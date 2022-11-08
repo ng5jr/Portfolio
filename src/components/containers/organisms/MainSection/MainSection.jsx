@@ -20,6 +20,7 @@ export const SwiperSlideCustom = styled(SwiperSlide)`
 
 const MainSection = ({ setIndex, activeIndex, setScrollIcon }) => {
   const [canSwipe, setCanSwipe] = useState(true);
+
   const [worldSlide, setWorldSlide] = useState(false);
   const [renderAbout, setRenderAbout] = useState(false);
   const [renderProjects, setRenderProjects] = useState(false);

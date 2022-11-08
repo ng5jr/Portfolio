@@ -7,7 +7,6 @@ export const RadialMenuWrapper = styled.div`
   bottom: 2rem;
   left: 2rem;
   z-index: 10;
-  font-size: 1rem;
   display: grid;
   place-items: center;
   cursor: pointer;
@@ -17,6 +16,7 @@ export const RadialMenuWrapper = styled.div`
   animation: ${grow} 1s forwards;
   animation-delay: 1s;
   color: black;
+
   svg {
     color: black;
   }
@@ -28,6 +28,7 @@ export const RadialMenuWrapper = styled.div`
 `;
 
 export const SettingsWrapper = styled.div`
+  outline: 1px solid black;
   position: absolute;
   width: 2.5rem;
   height: 2.5rem;

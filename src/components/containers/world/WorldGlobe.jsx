@@ -11,21 +11,25 @@ function Globe({ setData }) {
   const globeEl = useRef();
   const [countries, setCountries] = useState({ features: [] });
   const [markers, setMarkers] = useState([]);
+  const { isMobile, isDesktop } = useContext(DeviceContext);
   useEffect(() => {
-    globeEl.current.controls().autoRotate = true;
-    globeEl.current.controls().autoRotateSpeed = 0.5;
-    globeEl.current.pointOfView({ altitude: 1.8 });
-    globeEl.current.controls().enableZoom = false;
     setMarkers(defaultMarkers);
     setCountries(countriesData);
+    globeEl.current.controls().enableZoom = false;
+    globeEl.current.controls().autoRotate = true;
+    globeEl.current.controls().autoRotateSpeed = 0.5;
+    globeEl.current.pointOfView({
+      lat: 0.0,
+      lng: -58.7203427,
+      altitude: 1.8,
+    });
   }, []);
 
-  const { isMobile } = useContext(DeviceContext);
   return (
     <>
       <div onMouseEnter={() => {}} className="wrapper">
         <ReactGlobe
-          animateIn={false}
+          animateIn={true}
           ref={globeEl}
           height={isMobile ? 360 : 400}
           width={isMobile ? 360 : 400}
@@ -62,11 +66,14 @@ function Globe({ setData }) {
                 lng: d.lng,
                 altitude: 1.8,
               },
-              [1000]
+              [1500]
             );
           }}
           onCustomLayerHover={(d) => {
             globeEl.current.controls().autoRotate = false;
+          }}
+          onGlobeClick={() => {
+            globeEl.current.controls().autoRotate = true;
           }}
           globeMaterial={
             new THREE.MeshStandardMaterial({

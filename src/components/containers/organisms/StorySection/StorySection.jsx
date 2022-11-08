@@ -12,7 +12,7 @@ import {
 import Globe from "../../world/WorldGlobe";
 import { MdLocationOn } from "react-icons/md";
 import { FaArrowAltCircleDown, FaArrowAltCircleUp } from "react-icons/fa";
-
+import { TbRadiusBottomRight, TbRadiusTopRight } from "react-icons/tb";
 const StorySection = ({ index }) => {
   const active = index;
   const scrollElement = useRef(null);
@@ -30,16 +30,20 @@ const StorySection = ({ index }) => {
             {markerData ? (
               <>
                 <ScrollUp
-                  onClick={() => {
-                    scrollElement.current.scroll({
-                      top: 0,
-                      behavior: "smooth",
-                    });
-                  }}
+                // onClick={() => {
+                //   scrollElement.current.scroll({
+                //     top: 0,
+                //     behavior: "smooth",
+                //   });
+                // }}
                 >
-                  <FaArrowAltCircleUp />
+                  <TbRadiusTopRight />
+                  {/* <FaArrowAltCircleUp /> */}
                 </ScrollUp>
-                <InformationWrapper ref={scrollElement}>
+                <InformationWrapper
+                  className="swiper-no-swiping"
+                  ref={scrollElement}
+                >
                   <TopTitles>
                     <InfoTitle>
                       LOCATION{" "}
@@ -57,14 +61,15 @@ const StorySection = ({ index }) => {
                   </InfoTitle>
                 </InformationWrapper>
                 <ScrollDown
-                  onClick={() => {
-                    scrollElement.current.scroll({
-                      top: 150,
-                      behavior: "smooth",
-                    });
-                  }}
+                // onClick={() => {
+                //   scrollElement.current.scroll({
+                //     top: 150,
+                //     behavior: "smooth",
+                //   });
+                // }}
                 >
-                  <FaArrowAltCircleDown />
+                  <TbRadiusBottomRight />
+                  {/* <FaArrowAltCircleDown /> */}
                 </ScrollDown>
               </>
             ) : (

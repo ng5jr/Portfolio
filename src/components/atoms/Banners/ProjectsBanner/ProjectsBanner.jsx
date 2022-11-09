@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./ProjectsBanner.css";
-
+import COLORS from "../../../../theme/constants/colors";
 function ProjectsBanner() {
   function setTextAnimation(
     delay,
@@ -48,7 +48,11 @@ function ProjectsBanner() {
         stroke="#000"
         strokeWidth="0.25mm"
         fill="none"
-        style={{ stroke: "#000", strokeWidth: "0.25mm", fill: "none" }}
+        style={{
+          stroke: `${COLORS.background}`,
+          strokeWidth: "0.25mm",
+          fill: "none",
+        }}
       >
         <path
           d="M 89.1 14.851 L 119.25 14.851 L 119.25 120.151 L 93.6 120.151 L 93.6 57.001 L 70.05 120.151 L 49.35 120.151 L 25.65 56.851 L 25.65 120.151 L 0 120.151 L 0 14.851 L 30.3 14.851 L 59.85 87.751 L 89.1 14.851 Z"

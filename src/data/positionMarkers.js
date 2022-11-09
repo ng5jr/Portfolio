@@ -5,8 +5,8 @@ export default [
     lat: -38.5363646,
     lng: -58.7203427,
     size: 25,
-    radius: 6,
-    alt: 0.2,
+    radius: 5.5,
+    alt: 0.13,
     year: "1995 - now",
     description:
       "I was born in Necochea in 1995, and grew up living in Quequen with my parents. I am currently settled here, looking for my next opportunity to move.",
@@ -17,8 +17,8 @@ export default [
     lat: -34.615759,
     lng: -58.5033449,
     size: 25,
-    radius: 6,
-    alt: 0.17,
+    radius: 5.5,
+    alt: 0.15,
     year: "2014-2018",
     description:
       "At the age of 18, I moved to Buenos Aires to start my studies. I spent 3 years attending the Nautical Institute to become a Merchant Marine Officer. I finally graduated in 2018.",
@@ -77,7 +77,7 @@ export default [
     lat: -31.853866,
     lng: -55.026588,
     size: 25,
-    radius: 6,
+    radius: 5.5,
     alt: 0.1,
     year: "2022",
     description:

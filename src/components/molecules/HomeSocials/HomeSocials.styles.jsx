@@ -89,9 +89,9 @@ export const HomeSocialLink = styled.a`
 
   margin-bottom: 1.5rem;
   /* &:hover {
-      transform: scale(1.3) translateY(0);
-    }
-    &:active {
-      transform: scale(1.3) translateY(0.25rem);
-    } */
+    transform: scale(1.3) translateY(0);
+  } */
+  &:hover {
+    transform: scale(1.3) translateY(0.25rem);
+  }
 `;

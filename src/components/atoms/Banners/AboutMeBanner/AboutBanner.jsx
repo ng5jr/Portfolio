@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import "./AboutBanner.css";
+import COLORS from "../../../../theme/constants/colors";
 
 function AboutBanner() {
   function setTextAnimation(
@@ -49,7 +50,11 @@ function AboutBanner() {
         stroke="#000"
         strokeWidth="0.25mm"
         fill="none"
-        style={{ stroke: "#000", strokeWidth: "0.25mm", fill: "none" }}
+        style={{
+          stroke: `${COLORS.background}`,
+          strokeWidth: "0.25mm",
+          fill: "none",
+        }}
       >
         <path
           d="M 78.75 111 L 72.45 92.4 L 33.15 92.4 L 26.85 111 L 0 111 L 38.1 5.7 L 67.8 5.7 L 105.9 111 L 78.75 111 Z M 39.9 72.6 L 65.85 72.6 L 52.8 34.05 L 39.9 72.6 Z"

@@ -37,12 +37,18 @@ function Globe({ setData }) {
           backgroundColor={"rgb(31, 31, 32)"}
           customThreeObject={(d) =>
             new THREE.Mesh(
-              new THREE.OctahedronGeometry(d.radius),
+              new THREE.OctahedronGeometry(d.radius, 1),
               new THREE.MeshPhongMaterial({
+                shininess: 100,
+                // map: new THREE.TextureLoader().load(
+                //   "https://threejs.org/examples/textures/water/Water_2_M_Normal.jpg"
+                // ),
+                // bumpMap: new THREE.TextureLoader().load(
+                //   "https://threejs.org/examples/textures/water.jpg"
+                // ),
+                specular: 0xfffff,
+                flatShading: true,
                 color: d.color,
-                specular: "black",
-                shininess: 50,
-                reflectivity: 10,
               })
             )
           }
@@ -55,7 +61,6 @@ function Globe({ setData }) {
           onCustomLayerClick={(d) => {
             setData(d);
 
-            d.color = "white";
             markers.map((marker) => {
               marker.color = "#faa60a";
             });

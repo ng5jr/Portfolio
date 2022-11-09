@@ -6,7 +6,7 @@ import Scroll from "./components/atoms/Scroll/Scroll";
 import { DeviceProvider } from "./context/DeviceContext";
 import RadialMenu from "./components/atoms/RadialMenu/RadialMenu";
 import { AudioContext, AudioProvider } from "./context/AudioContext";
-import Cursor from "./components/atoms/Cursor/Cursor";
+
 function App() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [scrollIcon, setScrollIcon] = useState(true);
@@ -24,7 +24,6 @@ function App() {
           />
           {scrollIcon && <Scroll />}
           <RadialMenu />
-          <Cursor />
         </AudioProvider>
       </DeviceProvider>
     </div>

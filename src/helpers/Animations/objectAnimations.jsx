@@ -40,3 +40,30 @@ export const bounce = keyframes`
 	60% {transform: translateY(-15px);}
 
 `;
+
+export const Pulse = keyframes`
+	0%{
+		transform: scale(1)
+	}
+	50%{
+		transform: scale(1.2);
+	}
+		100%{
+		transform: scale(1);
+	}
+`;
+
+export const gelatine = keyframes`
+  
+  from{
+	  transform: scale(1, 1);
+
+  }
+  25% { transform: scale(0.9, 1.1); }
+  50% { transform: scale(1.1, 0.9); }
+  75% { transform: scale(0.95, 1.05); }
+  to{
+	  transform: scale(1, 1);
+	 
+  }
+`;

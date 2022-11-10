@@ -37,7 +37,7 @@ function Globe({ setData }) {
           backgroundColor={"rgb(31, 31, 32)"}
           customThreeObject={(d) =>
             new THREE.Mesh(
-              new THREE.OctahedronGeometry(d.radius, 1),
+              new THREE.OctahedronGeometry(d.radius, d.size),
               new THREE.MeshPhongMaterial({
                 shininess: 100,
                 // map: new THREE.TextureLoader().load(

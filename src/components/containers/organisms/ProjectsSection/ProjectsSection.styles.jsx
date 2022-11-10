@@ -3,6 +3,7 @@ import {
   showImage,
   showSwiperProjects,
 } from "../../../../helpers/Animations/objectAnimations";
+import { Pulse } from "../../../../helpers/Animations/objectAnimations";
 
 export const PageWrapper = styled.div`
   display: flex;
@@ -27,4 +28,14 @@ export const ImageWrapper = styled.div`
   > .home_image {
     filter: drop-shadow(30px 0px 4px #09090960);
   }
+`;
+
+export const InfoIconWrapper = styled.div`
+  animation: ${Pulse} 1.5s infinite;
+  cursor: pointer;
+  position: absolute;
+  right: 10%;
+  top: 20%;
+  transform: scale(1);
+  z-index: 4;
 `;

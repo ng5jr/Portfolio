@@ -11,7 +11,6 @@ import {
 } from "./StorySection.styles";
 import Globe from "../../world/WorldGlobe";
 import { MdLocationOn } from "react-icons/md";
-import { FaArrowAltCircleDown, FaArrowAltCircleUp } from "react-icons/fa";
 import { TbRadiusBottomRight, TbRadiusTopRight } from "react-icons/tb";
 const StorySection = ({ index }) => {
   const active = index;

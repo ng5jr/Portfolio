@@ -56,7 +56,7 @@ export const InfoTitle = styled.h2`
   text-align: center;
   line-height: 2rem;
   width: 100%;
-  margin: 1rem;
+  margin: 0.3rem;
   span {
     color: ${COLORS.secondary};
     font-family: "Poppins", sans-serif;
@@ -65,6 +65,7 @@ export const InfoTitle = styled.h2`
   }
   @media (min-width: 0px) {
     font-size: 1.5rem;
+    max-width: 90vw;
   }
   @media (min-width: 768px) {
     font-size: 2rem;

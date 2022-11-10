@@ -51,7 +51,7 @@ export const slideRightContactSection = keyframes`
 		transform: translateX(150%);
 	}
 	100%{
-		transform: translateX(45%);
+		transform: translateX(35%);
 	}
 `;
 

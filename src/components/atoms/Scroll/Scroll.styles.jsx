@@ -46,16 +46,18 @@ transform: translateY(-50%);
 `;
 
 export const ScrollWrapper = styled.div`
-  height: 30px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-  opacity: 0;
   animation: 5s ease 5s forwards ${ScrollAppear};
+  align-items: center;
+  bottom: 1rem;
+  display: flex;
+  height: 30px;
+  flex-direction: row;
+  justify-content: center;
+  opacity: 0;
+  position: absolute;
+  right: 1rem;
+  z-index: 15;
+
   @media (min-width: 1200px) {
     right: 2rem;
     width: unset;

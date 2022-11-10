@@ -34,7 +34,7 @@ const StackInfo = () => {
   return (
     <StackInfoWrapper>
       <InfoTitle>
-        TECH STACK <span>I usually code using:</span>
+        <span>I usually code using:</span>
       </InfoTitle>
       <InfoIconsWrapper>
         <AiFillHtml5 />

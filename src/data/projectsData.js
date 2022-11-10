@@ -23,8 +23,8 @@ export const ProjectsInfo = [
     description:
       "My latest project. Full responsive and interactive website created using React.js, styled-components, Swiper.js three.js and react-globe.js",
     imgSrc: Portfolio,
-    linkpage: "https://www.nmas.com.mx/",
-    linkgithub: "https://www.nmas.com.mx/",
+    linkpage: "https://www.nahuelgiordano.com/",
+    linkgithub: "https://github.com/ng5jr/portfolio",
     descVisibile: false,
     placeholderImg: PortfolioPlaceholder,
   },

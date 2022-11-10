@@ -121,7 +121,7 @@ export default [
   },
   {
     color: "#faa60a",
-    city: "Cádiz, Spain",
+    city: "Barbados",
     lat: 13.1884729,
     lng: -59.6753423,
     size: 0,

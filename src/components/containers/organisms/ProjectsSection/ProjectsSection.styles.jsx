@@ -38,4 +38,9 @@ export const InfoIconWrapper = styled.div`
   top: 20%;
   transform: scale(1);
   z-index: 4;
+  > span {
+    animation: ${showSwiperProjects} 1s forwards;
+    animation-delay: 3s;
+    opacity: 0;
+  }
 `;

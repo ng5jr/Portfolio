@@ -1,5 +1,9 @@
 import React from "react";
-import { InfoIconsWrapper, InfoTitle } from "./StackInfo.styles";
+import {
+  InfoIconsWrapper,
+  InfoTitle,
+  StackInfoWrapper,
+} from "./StackInfo.styles";
 import {
   DiCss3,
   DiJavascript,
@@ -28,7 +32,7 @@ import {
 
 const StackInfo = () => {
   return (
-    <>
+    <StackInfoWrapper>
       <InfoTitle>
         TECH STACK <span>I usually code using:</span>
       </InfoTitle>
@@ -58,7 +62,7 @@ const StackInfo = () => {
       <InfoTitle>
         <span>But I'm always learning more!</span>
       </InfoTitle>
-    </>
+    </StackInfoWrapper>
   );
 };
 

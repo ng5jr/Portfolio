@@ -5,9 +5,13 @@ import {
   showSwiperProjects,
 } from "../../../helpers/Animations/objectAnimations";
 
+export const StackInfoWrapper = styled.div`
+  animation: ${showSwiperProjects} 1s forwards;
+  animation-delay: 1.5s;
+  opacity: 0;
+`;
 export const InfoIconsWrapper = styled.div`
   align-items: center;
-  animation: ${showSwiperProjects} 1s forwards;
   background-color: ${COLORS.secondary};
   border-radius: 2rem;
   box-shadow: 5px 5px 3px rgb(0 0 0);
@@ -17,7 +21,6 @@ export const InfoIconsWrapper = styled.div`
   gap: 10px;
   justify-content: center;
   margin: 0 auto;
-  opacity: 0;
   padding: 1rem;
 
   svg {

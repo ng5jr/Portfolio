@@ -5,7 +5,7 @@ import COLORS from "../../../theme/constants/colors";
 export const SwiperWrapper = styled.div`
   .projects_swiper {
     animation: ${showSwiperProjects} 1s forwards;
-    animation-delay: 0.5s;
+    animation-delay: 1.5s;
     height: 300px;
     margin-top: 1rem;
     opacity: 0;

@@ -173,7 +173,7 @@ export const DescContainer = styled.p`
   border-radius: 20px;
   box-shadow: 5px 5px 3px rgb(0, 0, 0);
   color: ${COLORS.background};
-  font-family: "Bungee";
+  font-family: "Permanent Marker", cursive;
   font-style: italic;
   opacity: 0;
   text-align: center;

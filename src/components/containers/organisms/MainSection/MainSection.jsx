@@ -2,15 +2,22 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import styled from "styled-components";
 import { Navigation, Mousewheel } from "swiper";
 import "../../../../../src/styles.css";
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect, lazy, Suspense } from "react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-import StorySection from "../StorySection/StorySection";
+// import StorySection from "../StorySection/StorySection";
 import HomeSection from "../HomeSection/HomeSection";
-import AboutSection from "../AboutSection/AboutSection";
-import ProjectsSection from "../ProjectsSection/ProjectsSection";
-import ContactSection from "../ContactSection/ContactSection";
+// import AboutSection from "../AboutSection/AboutSection";
+// import ProjectsSection from "../ProjectsSection/ProjectsSection";
+// import ContactSection from "../ContactSection/ContactSection";
+
+const StorySection = lazy(() => import("../StorySection/StorySection"));
+const AboutSection = lazy(() => import("../AboutSection/AboutSection"));
+const ProjectsSection = lazy(() =>
+  import("../ProjectsSection/ProjectsSection")
+);
+const ContactSection = lazy(() => import("../ContactSection/ContactSection"));
 
 export const SwiperSlideCustom = styled(SwiperSlide)`
   height: calc(100vh) - 50px;
@@ -73,27 +80,36 @@ const MainSection = ({ setIndex, activeIndex, setScrollIcon }) => {
       longSwipesMs={1000}
       style={{ paddingTop: "50px" }}
       edgeSwipeDetection={true}
-
-      // onAfterInit={renderMap}
     >
       <SwiperSlideCustom>
         <HomeSection />
       </SwiperSlideCustom>
       <SwiperSlideCustom>
-        <AboutSection render={renderAbout}></AboutSection>
+        <Suspense fallback={<div>Loading...</div>}>
+          <AboutSection render={renderAbout} />
+        </Suspense>
       </SwiperSlideCustom>
       <SwiperSlideCustom>
-        <StorySection
-          swipe={canSwipe}
-          setSwipe={setCanSwipe}
-          index={worldSlide}
-        />
+        <Suspense fallback={<div>Loading...</div>}>
+          <StorySection
+            swipe={canSwipe}
+            setSwipe={setCanSwipe}
+            index={worldSlide}
+          />
+        </Suspense>
       </SwiperSlideCustom>
       <SwiperSlideCustom>
-        <ProjectsSection render={renderProjects} />
+        <Suspense fallback={<div>Loading...</div>}>
+          <ProjectsSection render={renderProjects} />
+        </Suspense>
       </SwiperSlideCustom>
       <SwiperSlideCustom>
-        <ContactSection setScrollIcon={setScrollIcon} render={renderContact} />
+        <Suspense fallback={<div>Loading...</div>}>
+          <ContactSection
+            setScrollIcon={setScrollIcon}
+            render={renderContact}
+          />
+        </Suspense>
       </SwiperSlideCustom>
     </Swiper>
   );

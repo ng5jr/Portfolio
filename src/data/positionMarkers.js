@@ -153,7 +153,7 @@ export default [
     alt: 0.1,
     year: "2022",
     description:
-      "We spent 3 days in in port during our call to Rouen and I fell in love with the city. It is full of culture, incredible buildings and amazing history. The inward transit from the English Channel is simply beautiful.",
+      "We spent 3 days in port during our call to Rouen and I fell in love with the city. It is full of culture, incredible buildings and amazing history. The inward transit from the English Channel is simply beautiful.",
   },
   {
     color: "#faa60a",

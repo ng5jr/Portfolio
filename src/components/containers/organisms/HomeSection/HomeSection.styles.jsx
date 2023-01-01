@@ -18,7 +18,7 @@ export const PageWrapper = styled.div`
   align-items: center;
   height: 100%;
   width: 100%;
-  @media screen and (min-height: 1000px) {
+  @media screen and (min-height: 600px) {
     justify-content: center;
     margin-top: -50px;
   }

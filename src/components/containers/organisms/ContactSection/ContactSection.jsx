@@ -59,6 +59,7 @@ const ContactSection = ({ render, setScrollIcon }) => {
                   <a
                     title={"Link to " + contact.name + " profile"}
                     href={contact.href}
+                    target="_blank"
                   >
                     <ContactImages
                       delay={contact.delay}

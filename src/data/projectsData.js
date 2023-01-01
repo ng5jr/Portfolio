@@ -17,17 +17,17 @@ import PLantsPlaceholder from "../assets/ProjectsImages/Projects/Placeholder/pla
 import Portfolio from "../assets/ProjectsImages/Projects/portfolio.webp";
 import PortfolioPlaceholder from "../assets/ProjectsImages/Projects/Placeholder/portfolio_placeholder.webp";
 export const ProjectsInfo = [
-  {
-    id: 10,
-    title: "Portfolio",
-    description:
-      "My latest project. Full responsive and interactive website created using React.js, styled-components, Swiper.js three.js and react-globe.js",
-    imgSrc: Portfolio,
-    linkpage: "https://www.nahuelgiordano.com/",
-    linkgithub: "https://github.com/ng5jr/portfolio",
-    descVisibile: false,
-    placeholderImg: PortfolioPlaceholder,
-  },
+  // {
+  //   id: 10,
+  //   title: "Portfolio",
+  //   description:
+  //     "My latest project. Full responsive and interactive website created using React.js, styled-components, Swiper.js three.js and react-globe.js",
+  //   imgSrc: Portfolio,
+  //   linkpage: "https://www.nahuelgiordano.com/",
+  //   linkgithub: "https://github.com/ng5jr/portfolio",
+  //   descVisibile: false,
+  //   placeholderImg: PortfolioPlaceholder,
+  // },
   {
     id: 9,
     title: "N +",

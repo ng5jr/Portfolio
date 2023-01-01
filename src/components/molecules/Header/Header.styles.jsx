@@ -16,8 +16,17 @@ export const MenuWrapper = styled.menu`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 20px;
+
   width: 100%;
+  @media (min-width: 0px) {
+    gap: 20px;
+  }
+  @media (min-width: 768px) {
+    gap: 20px;
+  }
+  @media (min-width: 1200px) {
+    gap: 60px;
+  }
 `;
 
 export const MenuButton = styled.div`

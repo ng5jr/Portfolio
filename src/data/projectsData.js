@@ -14,20 +14,11 @@ import Nmas from "../assets/ProjectsImages/Projects/nmas.webp";
 import NmasPlaceholder from "../assets/ProjectsImages/Projects/Placeholder/nmas_placeholder.webp";
 import PLants from "../assets/ProjectsImages/Projects/plantpedia.webp";
 import PLantsPlaceholder from "../assets/ProjectsImages/Projects/Placeholder/plantpedia_placeholder.webp";
+import NFT from "../assets/ProjectsImages/Projects/nft.webp";
+import NFTPlaceholder from "../assets/ProjectsImages/Projects/Placeholder/nft_placeholder.webp";
 import Portfolio from "../assets/ProjectsImages/Projects/portfolio.webp";
 import PortfolioPlaceholder from "../assets/ProjectsImages/Projects/Placeholder/portfolio_placeholder.webp";
 export const ProjectsInfo = [
-  // {
-  //   id: 10,
-  //   title: "Portfolio",
-  //   description:
-  //     "My latest project. Full responsive and interactive website created using React.js, styled-components, Swiper.js three.js and react-globe.js",
-  //   imgSrc: Portfolio,
-  //   linkpage: "https://www.nahuelgiordano.com/",
-  //   linkgithub: "https://github.com/ng5jr/portfolio",
-  //   descVisibile: false,
-  //   placeholderImg: PortfolioPlaceholder,
-  // },
   {
     id: 9,
     title: "N +",
@@ -38,6 +29,17 @@ export const ProjectsInfo = [
     linkgithub: "https://www.nmas.com.mx/",
     descVisibile: false,
     placeholderImg: NmasPlaceholder,
+  },
+  {
+    id: 10,
+    title: "NFT Marketplace",
+    description:
+      "Landing page for the NFT Marketplace web application made with React Native and available on Expo",
+    imgSrc: NFT,
+    linkpage: "https://showcase-kappa.vercel.app",
+    linkgithub: "https://github.com/ng5jr/showcase",
+    descVisibile: false,
+    placeholderImg: NFTPlaceholder,
   },
   {
     id: 8,

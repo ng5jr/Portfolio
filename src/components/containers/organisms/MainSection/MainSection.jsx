@@ -11,7 +11,7 @@ import HomeSection from "../HomeSection/HomeSection";
 // import AboutSection from "../AboutSection/AboutSection";
 // import ProjectsSection from "../ProjectsSection/ProjectsSection";
 // import ContactSection from "../ContactSection/ContactSection";
-import Light from "../../../atoms/Light/Light";
+// import Light from "../../../atoms/Light/Light";
 const StorySection = lazy(() => import("../StorySection/StorySection"));
 const AboutSection = lazy(() => import("../AboutSection/AboutSection"));
 const ProjectsSection = lazy(() =>
@@ -81,7 +81,7 @@ const MainSection = ({ setIndex, activeIndex, setScrollIcon }) => {
       style={{ paddingTop: "50px", position: "relative" }}
       edgeSwipeDetection={true}
     >
-      {activeIndex !== 2 ? <Light /> : <></>}
+      {/* {activeIndex !== 2 ? <Light /> : <></>} */}
 
       <SwiperSlideCustom>
         <HomeSection />

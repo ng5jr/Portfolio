@@ -32,7 +32,7 @@ export const ProjectsInfo = [
   },
   {
     id: 10,
-    title: "NFT Marketplace",
+    title: "NFT",
     description:
       "Landing page for the NFT Marketplace web application made with React Native and available on Expo",
     imgSrc: NFT,

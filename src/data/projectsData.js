@@ -35,7 +35,7 @@ export const ProjectsInfo = [
 	},
 	{
 		id: 12,
-		title: "Nostr.directory",
+		title: "N.directory",
 		description: "Find people you know on other social media sites on nostr.",
 		imgSrc: Directory,
 		linkpage: "https://nostr.directory/",

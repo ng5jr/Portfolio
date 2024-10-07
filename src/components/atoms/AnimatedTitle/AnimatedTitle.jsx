@@ -65,7 +65,7 @@ const AnimatedTitle = () => {
         })}
       </SubtitleContainer>
       <DescContainer>
-        I love to create useful stuff to make people's lifes easier
+        I love to create useful stuff to make people's lives easier
       </DescContainer>
     </>
   );
